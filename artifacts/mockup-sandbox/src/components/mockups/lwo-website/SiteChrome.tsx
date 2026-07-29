@@ -5,19 +5,29 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const links = [["HOME", "#home"], ["SERVICES", "#services"], ["WHY US", "#why-us"], ["ABOUT", "#about"], ["CONTACT US", "#contact"]];
   return <header className="bg-white">
-    <section id="home" className="relative flex min-h-[min(100vh,820px)] items-center justify-center overflow-hidden bg-[#1A1A1A]">
+    <div className="sticky top-0 z-50 bg-white">
+      <div className="mx-auto h-px max-w-7xl bg-[#C9A96E]" />
+      <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-5 py-5 lg:px-8">
+        <a href="#home"><img src="/__mockup/images/lwo-logomark.png" alt="Lakewoods" className="h-9 w-auto object-contain" /></a>
+        <button aria-label="Toggle menu" onClick={() => setOpen(!open)} className="text-[#1A1A1A] md:hidden">{open ? <X size={19}/> : <Menu size={19}/>}</button>
+        <div className="hidden items-center gap-8 md:flex">
+          {links.map(([label, href]) => <a key={href} href={href} className="text-[10px] font-bold tracking-[.24em] text-[#1A1A1A] transition-colors hover:text-[#1F8080]">{label}</a>)}
+        </div>
+        <a href="#contact" className="hidden items-center gap-2 bg-[#F46D0B] px-5 py-3 text-[9px] font-bold uppercase tracking-[.2em] text-white hover:bg-[#d95d07] md:flex">CALL NOW</a>
+      </nav>
+      <div className="mx-auto h-px max-w-7xl bg-[#d8d0c3]" />
+      {open && <nav className="flex flex-col gap-5 border-b border-[#C9A96E] bg-white px-5 py-6 md:hidden">
+        {links.map(([label, href]) => <a onClick={() => setOpen(false)} key={href} href={href} className="text-[10px] font-bold tracking-[.24em] text-[#1A1A1A]">{label}</a>)}
+      </nav>}
+    </div>
+    <section id="home" className="relative flex min-h-[min(75vh,640px)] items-center justify-center overflow-hidden bg-[#1A1A1A]">
       <img src="/__mockup/images/lwo-hero.png" alt="Moody architectural office building exterior" className="absolute inset-0 h-full w-full object-cover opacity-70" />
       <div className="absolute inset-0 bg-[#0b0d0d]/55" />
-      <div className="relative z-10 flex flex-col items-center px-5 text-center"><img src="/__mockup/images/lwo-logo.png" alt="Lakewoods Office Solutions" className="w-[230px] md:w-[300px]" /><p className="mt-8 max-w-md text-[10px] font-semibold uppercase tracking-[.38em] text-white/70">Commercial workplace design & installation</p></div>
-    </section>
-    <div className="mx-auto h-px max-w-7xl bg-[#C9A96E]" />
-    <nav className="relative mx-auto flex max-w-7xl items-center justify-center px-5 py-5">
-      <button aria-label="Toggle menu" onClick={() => setOpen(!open)} className="absolute right-5 text-[#1A1A1A] md:hidden">{open ? <X size={19}/> : <Menu size={19}/>}</button>
-      <div className={`${open ? "flex" : "hidden"} absolute left-0 top-full z-30 w-full flex-col gap-5 border-b border-[#C9A96E] bg-white px-5 py-6 md:static md:flex md:flex-row md:items-center md:justify-between md:border-0 md:px-0 md:py-0`}>
-        {links.map(([label, href]) => <a key={href} onClick={() => setOpen(false)} href={href} className="text-center text-[10px] font-bold tracking-[.24em] text-[#1A1A1A] transition-colors hover:text-[#1F8080]">{label}</a>)}
+      <div className="relative z-10 flex flex-col items-center px-5 text-center">
+        <img src="/__mockup/images/lwo-logo.png" alt="Lakewoods Office Solutions" className="w-[230px] md:w-[300px]" />
+        <p className="mt-8 max-w-md text-[10px] font-semibold uppercase tracking-[.38em] text-white/70">Commercial workplace design & installation</p>
       </div>
-    </nav>
-    <div className="mx-auto h-px max-w-7xl bg-[#d8d0c3]" />
+    </section>
   </header>;
 }
 

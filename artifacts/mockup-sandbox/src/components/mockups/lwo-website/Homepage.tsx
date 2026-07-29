@@ -1,13 +1,12 @@
-import { ArrowUpRight, Check, Compass, Layers3, MoveRight, ShieldCheck, SlidersHorizontal, Sparkles, Wrench, type LucideIcon } from "lucide-react";
+import { ArrowUpRight, Building2, Brush, Check, Compass, Layers3, MoveRight, ShieldCheck, SlidersHorizontal, Sparkles, Truck, Wrench, type LucideIcon } from "lucide-react";
 import { Footer, SectionMark, SiteHeader } from "./SiteChrome";
 
 const services: [string, string, string, LucideIcon][] = [
-  ["01", "OFFICE FURNITURE INSTALLATION", "Assembly and placement of workstations, desks, chairs, and the pieces that make a workplace work.", Wrench],
-  ["02", "CUBICLE & PANEL SYSTEMS", "Modular partitioning and privacy solutions that give every team room to focus and connect.", Layers3],
-  ["03", "OFFICE RELOCATIONS & MOVES", "A complete move plan, careful handling, and precise reinstallation that keeps business moving.", MoveRight],
-  ["04", "ERGONOMIC WORKSPACE SOLUTIONS", "Health-focused workstation configuration for comfort, energy, and better everyday performance.", SlidersHorizontal],
-  ["05", "SPACE PLANNING & DESIGN", "Layouts optimized for productivity, flow, collaboration, and the way your people actually work.", Compass],
-  ["06", "TECHNOLOGY INTEGRATION", "Cable management, power solutions, monitor arms, and the details behind a clean connected space.", Sparkles],
+  ["01", "COMMERCIAL STORAGE", "Secure, organized storage for business assets, inventory, documents, and equipment.", Building2],
+  ["02", "COMMERCIAL MOVING", "A complete move plan, careful handling, and precise reinstallation that keeps business moving.", Truck],
+  ["03", "COMMERCIAL PAINTING", "Precise application, minimal disruption, and finishes built to last.", Brush],
+  ["04", "COMMERCIAL DESIGN & FURNITURE", "Bespoke spaces and custom furniture shaped around your brand and people.", Compass],
+  ["05", "COMMERCIAL RELOCATION", "End-to-end relocation management from first site walk to final workstation.", MoveRight],
 ];
 
 export default function Homepage() {

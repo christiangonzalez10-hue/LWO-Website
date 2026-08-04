@@ -25,8 +25,8 @@ export default function AboutPage() {
       <section className="mx-auto grid max-w-7xl gap-0 border-y border-[#d8d0c3] lg:grid-cols-2">
         <div className="relative min-h-[380px] overflow-hidden bg-[#1A1A1A]">
           <img
-            src="/images/lwo-installation.png"
-            alt="Lakewoods team installing office furniture"
+            src="/images/lwo-about.jpg"
+            alt="Lakewoods Office Solutions team"
             className="h-full w-full object-cover opacity-70"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/60 to-transparent" />

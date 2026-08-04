@@ -7,7 +7,7 @@ export const modules: ModuleMap = {
   "./components/mockups/lwo-website/PaintingPage.tsx": () => import("../components/mockups/lwo-website/PaintingPage.tsx"),
   "./components/mockups/lwo-website/RelocationPage.tsx": () => import("../components/mockups/lwo-website/RelocationPage.tsx"),
   "./components/mockups/lwo-website/ServicePage.tsx": () => import("../components/mockups/lwo-website/ServicePage.tsx"),
-  "./components/mockups/lwo-website/StoragePage.tsx": () => import("../components/mockups/lwo-website/StoragePage.tsx"),
   "./components/mockups/lwo-website/ServiceTemplate.tsx": () => import("../components/mockups/lwo-website/ServiceTemplate.tsx"),
   "./components/mockups/lwo-website/SiteChrome.tsx": () => import("../components/mockups/lwo-website/SiteChrome.tsx"),
+  "./components/mockups/lwo-website/StoragePage.tsx": () => import("../components/mockups/lwo-website/StoragePage.tsx")
 };

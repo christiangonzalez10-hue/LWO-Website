@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Lakewoods Office Solutions"
+description = "SEO-optimized marketing site with homepage and six service pages for Lakewoods Office Solutions."
+version = "1.0.0"
+id = "artifacts/lwo-website"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18244
+
+[services.development]
+run = "pnpm --filter @workspace/lwo-website run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/lwo-website", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/lwo-website/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18244"
+BASE_PATH = "/"

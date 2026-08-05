@@ -127,7 +127,7 @@ export function Footer() {
         <div>
           <p className="mb-5 text-[10px] font-bold tracking-[.24em] text-[#C9A96E]">CONTACT</p>
           <div className="flex flex-col gap-3 text-sm text-white/60">
-            <a href="tel:18005550184" className="hover:text-white transition-colors">1 800 555 0184</a>
+            <a href="tel:8017125772" className="hover:text-white transition-colors">(801) 712-5772</a>
             <a href="mailto:contact@lwosolutions.com" className="hover:text-white transition-colors">contact@lwosolutions.com</a>
             <span>Serving businesses nationwide</span>
           </div>

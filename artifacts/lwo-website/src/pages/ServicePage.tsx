@@ -60,7 +60,7 @@ export default function ServicePage() {
           assembles, and performs exactly as planned.
         </p>
         <a
-          href="mailto:hello@lwosolutions.com"
+          href="mailto:contact@lwosolutions.com"
           className="mt-9 inline-flex items-center gap-3 bg-[#F46D0B] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#d95d07]"
         >
           CALL NOW <ArrowUpRight size={15} />
@@ -162,7 +162,7 @@ export default function ServicePage() {
           A sharper space starts with a sharper plan.
         </h2>
         <a
-          href="mailto:hello@lwosolutions.com"
+          href="mailto:contact@lwosolutions.com"
           className="mt-9 inline-flex items-center gap-3 bg-[#F46D0B] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#d95d07]"
         >
           REQUEST A CONSULTATION <ArrowUpRight size={15} />

@@ -45,7 +45,7 @@ export function SiteHeader() {
             ))}
           </div>
           <a
-            href="mailto:hello@lwosolutions.com"
+            href="mailto:contact@lwosolutions.com"
             className="hidden items-center gap-2 bg-[#F46D0B] px-5 py-3 text-[9px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#d95d07] md:flex"
           >
             CALL NOW
@@ -128,7 +128,7 @@ export function Footer() {
           <p className="mb-5 text-[10px] font-bold tracking-[.24em] text-[#C9A96E]">CONTACT</p>
           <div className="flex flex-col gap-3 text-sm text-white/60">
             <a href="tel:18005550184" className="hover:text-white transition-colors">1 800 555 0184</a>
-            <a href="mailto:hello@lwosolutions.com" className="hover:text-white transition-colors">hello@lwosolutions.com</a>
+            <a href="mailto:contact@lwosolutions.com" className="hover:text-white transition-colors">contact@lwosolutions.com</a>
             <span>Serving businesses nationwide</span>
           </div>
         </div>

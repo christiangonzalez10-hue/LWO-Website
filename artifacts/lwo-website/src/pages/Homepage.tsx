@@ -11,6 +11,7 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import { Footer, SectionMark, SiteHeader } from '@/components/SiteChrome';
+import { useSEO } from '@/hooks/useSEO';
 
 const services: [string, string, string, string, LucideIcon][] = [
   ['01', 'COMMERCIAL STORAGE', 'Secure, organized storage for business assets, inventory, documents, and equipment.', '/services/commercial-storage', Building2],
@@ -21,7 +22,40 @@ const services: [string, string, string, string, LucideIcon][] = [
   ['06', 'OFFICE INSTALLATIONS', 'Expert assembly and placement of workstations, desks, panels, and ergonomic solutions.', '/services/office-installations', Wrench],
 ];
 
+const LOCAL_BUSINESS_JSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://www.lwosolutions.com/#business',
+  name: 'Lakewoods Office Solutions',
+  description: 'Family-owned commercial office solutions — furniture installation, moving, painting, space planning, and relocation. Utah-based, serving businesses nationwide.',
+  url: 'https://www.lwosolutions.com',
+  email: 'hello@lwosolutions.com',
+  logo: 'https://www.lwosolutions.com/images/lwo-logo.png',
+  image: 'https://www.lwosolutions.com/images/lwo-hero.png',
+  areaServed: { '@type': 'Country', name: 'United States' },
+  address: { '@type': 'PostalAddress', addressRegion: 'UT', addressCountry: 'US' },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Commercial Office Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Office Furniture Installation', url: 'https://www.lwosolutions.com/services/office-installations' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Storage Solutions', url: 'https://www.lwosolutions.com/services/commercial-storage' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Moving Services', url: 'https://www.lwosolutions.com/services/commercial-moving' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Painting Services', url: 'https://www.lwosolutions.com/services/commercial-painting' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Office Design & Furniture', url: 'https://www.lwosolutions.com/services/commercial-design-furniture' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Commercial Office Relocation', url: 'https://www.lwosolutions.com/services/commercial-relocation' } },
+    ],
+  },
+};
+
 export default function Homepage() {
+  useSEO({
+    title: 'Office Furniture Installation & Workspace Design | Lakewoods Office Solutions',
+    description: 'Lakewoods Office Solutions — Utah-based, family-owned commercial office services: furniture installation, moving, painting, space planning, and relocation nationwide.',
+    canonical: '/',
+    jsonLd: LOCAL_BUSINESS_JSONLD,
+  });
+
   return (
     <main className="min-h-screen bg-white font-['Montserrat'] text-[#4E4B66]">
       <SiteHeader />
@@ -112,7 +146,8 @@ export default function Homepage() {
         <div className="relative min-h-[340px] overflow-hidden bg-[#1A1A1A]">
           <img
             src="/images/lwo-installation.png"
-            alt="Office furniture installation"
+            alt="Office furniture installation by Lakewoods team"
+            loading="lazy"
             className="h-full w-full object-cover opacity-75"
           />
           <div className="absolute bottom-0 left-0 border-t border-[#C9A96E] bg-[#1A1A1A]/90 px-7 py-5 text-[10px] font-bold uppercase tracking-[.2em] text-[#C9A96E]">

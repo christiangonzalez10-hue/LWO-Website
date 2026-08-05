@@ -2,6 +2,21 @@ import { ClipboardCheck, DraftingCompass, Truck, CheckCircle2 } from 'lucide-rea
 import ServiceTemplate, { type ServiceConfig } from '@/components/ServiceTemplate';
 
 const config: ServiceConfig = {
+  seo: {
+    title: 'Commercial Moving Services | Lakewoods Office Solutions',
+    description: 'Full-service commercial office moving for businesses of every size. Pre-move planning, furniture disassembly, IT equipment handling, and after-hours availability nationwide.',
+    canonical: '/services/commercial-moving',
+    ogImage: 'https://www.lwosolutions.com/images/lwo-moving.png',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Commercial Moving Services',
+      description: 'Full-service commercial moving — pre-move planning, furniture disassembly and reassembly, IT handling, and after-hours availability.',
+      provider: { '@type': 'LocalBusiness', '@id': 'https://www.lwosolutions.com/#business', name: 'Lakewoods Office Solutions' },
+      areaServed: { '@type': 'Country', name: 'United States' },
+      url: 'https://www.lwosolutions.com/services/commercial-moving',
+    },
+  },
   label: 'OFFICE MOVING SPECIALISTS',
   title: 'Commercial Moving Services',
   intro: 'Full-service commercial moving for businesses of every size — planned, coordinated, and executed with zero disruption to your operations.',

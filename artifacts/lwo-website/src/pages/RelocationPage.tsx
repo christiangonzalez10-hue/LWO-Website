@@ -2,6 +2,21 @@ import { ClipboardCheck, DraftingCompass, Route, CheckCircle2 } from 'lucide-rea
 import ServiceTemplate, { type ServiceConfig } from '@/components/ServiceTemplate';
 
 const config: ServiceConfig = {
+  seo: {
+    title: 'Commercial Office Relocation Services | Lakewoods Office Solutions',
+    description: 'End-to-end commercial office relocation management — site surveys, vendor coordination, decommissioning, multi-site moves, and complete setup at your new location nationwide.',
+    canonical: '/services/commercial-relocation',
+    ogImage: 'https://www.lwosolutions.com/images/lwo-relocation.png',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Commercial Office Relocation Services',
+      description: 'End-to-end office relocation management — site surveys, vendor coordination, decommissioning, and complete setup at the new location.',
+      provider: { '@type': 'LocalBusiness', '@id': 'https://www.lwosolutions.com/#business', name: 'Lakewoods Office Solutions' },
+      areaServed: { '@type': 'Country', name: 'United States' },
+      url: 'https://www.lwosolutions.com/services/commercial-relocation',
+    },
+  },
   label: 'END-TO-END OFFICE RELOCATION',
   title: 'Commercial Relocation Services',
   intro: 'Comprehensive office relocation management — from the first site walk to the final workstation, we handle every detail so your team hits the ground running in their new space.',

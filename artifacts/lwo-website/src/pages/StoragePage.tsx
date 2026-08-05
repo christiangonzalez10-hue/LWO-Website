@@ -2,6 +2,21 @@ import { ClipboardCheck, DraftingCompass, ShieldCheck, Truck } from 'lucide-reac
 import ServiceTemplate, { type ServiceConfig } from '@/components/ServiceTemplate';
 
 const config: ServiceConfig = {
+  seo: {
+    title: 'Commercial Storage Solutions | Lakewoods Office Solutions',
+    description: 'Secure, organized commercial storage for business assets, inventory, documents, and equipment. Flexible short- and long-term options with full inventory tracking nationwide.',
+    canonical: '/services/commercial-storage',
+    ogImage: 'https://www.lwosolutions.com/images/lwo-storage.png',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Commercial Storage Solutions',
+      description: 'Secure, organized commercial storage for business assets, inventory, documents, and equipment with flexible terms and inventory tracking.',
+      provider: { '@type': 'LocalBusiness', '@id': 'https://www.lwosolutions.com/#business', name: 'Lakewoods Office Solutions' },
+      areaServed: { '@type': 'Country', name: 'United States' },
+      url: 'https://www.lwosolutions.com/services/commercial-storage',
+    },
+  },
   label: 'SECURE WORKSPACE STORAGE',
   title: 'Commercial Storage Solutions',
   intro: 'Secure, organized storage solutions for business assets, inventory, documents, and equipment during transitions or on an ongoing basis.',

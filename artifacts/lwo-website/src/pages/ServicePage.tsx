@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import { Footer, SectionMark, SiteHeader } from '@/components/SiteChrome';
+import { useSEO } from '@/hooks/useSEO';
 
 const faqs: [string, string][] = [
   ['WHAT DOES YOUR OFFICE FURNITURE INSTALLATION SERVICE INCLUDE?', 'Our team handles receiving, inventory, assembly, placement, leveling, punch-list corrections, and removal of packaging. We coordinate directly with your furniture dealer or general contractor.'],
@@ -26,6 +27,22 @@ const steps: [string, string, string, LucideIcon][] = [
 
 export default function ServicePage() {
   const [active, setActive] = useState<number | null>(0);
+
+  useSEO({
+    title: 'Office Furniture Installation Services | Lakewoods Office Solutions',
+    description: 'Professional office furniture installation for businesses nationwide. Expert assembly, placement, leveling, and punch-list support for workstations, desks, panels, and conference rooms.',
+    canonical: '/services/office-installations',
+    ogImage: 'https://www.lwosolutions.com/images/lwo-installation.png',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Office Furniture Installation',
+      description: 'Professional office furniture installation — receiving, assembly, placement, leveling, and punch-list support for commercial workspaces.',
+      provider: { '@type': 'LocalBusiness', '@id': 'https://www.lwosolutions.com/#business', name: 'Lakewoods Office Solutions' },
+      areaServed: { '@type': 'Country', name: 'United States' },
+      url: 'https://www.lwosolutions.com/services/office-installations',
+    },
+  });
 
   return (
     <main className="min-h-screen bg-white font-['Montserrat'] text-[#4E4B66]">
@@ -56,6 +73,7 @@ export default function ServicePage() {
           <img
             src="/images/lwo-installation.png"
             alt="Professionals installing modern office furniture"
+            loading="lazy"
             className="h-[220px] w-full object-cover"
           />
         </div>

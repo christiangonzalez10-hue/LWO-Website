@@ -1,8 +1,10 @@
 import { ArrowUpRight, ChevronDown, CheckCircle2, type LucideIcon } from 'lucide-react';
 import { useState } from 'react';
 import { Footer, SectionMark, SiteHeader } from '@/components/SiteChrome';
+import { useSEO, type SEOMeta } from '@/hooks/useSEO';
 
 export type ServiceConfig = {
+  seo: SEOMeta;
   label: string;
   title: string;
   intro: string;
@@ -15,6 +17,7 @@ export type ServiceConfig = {
 
 export default function ServiceTemplate({ config }: { config: ServiceConfig }) {
   const [active, setActive] = useState<number | null>(0);
+  useSEO(config.seo);
 
   return (
     <main className="min-h-screen bg-white font-['Montserrat'] text-[#4E4B66]">
@@ -39,7 +42,12 @@ export default function ServiceTemplate({ config }: { config: ServiceConfig }) {
       {/* Detail */}
       <section className="mx-auto grid max-w-7xl gap-12 border-y border-[#d8d0c3] px-5 py-16 lg:grid-cols-2 lg:items-center lg:px-8">
         <div>
-          <img src={config.image} alt={config.imageAlt} className="h-[220px] w-full object-cover" />
+          <img
+            src={config.image}
+            alt={config.imageAlt}
+            loading="lazy"
+            className="h-[220px] w-full object-cover"
+          />
         </div>
         <div>
           <p className="text-xs font-bold uppercase tracking-[.28em] text-[#1F8080]">

@@ -74,6 +74,7 @@ export function SiteHeader() {
         <img
           src="/images/lwo-hero.png"
           alt="Moody architectural office building exterior"
+          fetchPriority="high"
           className="absolute inset-0 h-full w-full object-cover opacity-70"
         />
         <div className="absolute inset-0 bg-[#0b0d0d]/55" />
@@ -96,7 +97,7 @@ export function SectionMark() {
   return (
     <div className="flex items-center justify-center gap-5 py-10">
       <span className="h-px w-20 bg-[#C9A96E]" />
-      <img src="/images/lwo-logomark.png" alt="" className="h-10 w-10 object-contain" />
+      <img src="/images/lwo-logomark.png" alt="" loading="lazy" className="h-10 w-10 object-contain" />
       <span className="h-px w-20 bg-[#C9A96E]" />
     </div>
   );
@@ -107,7 +108,7 @@ export function Footer() {
     <footer className="bg-[#1A1A1A] px-5 py-14 text-white lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
         <div>
-          <img src="/images/lwo-logo.png" alt="Lakewoods Office Solutions" className="mb-6 w-44" />
+          <img src="/images/lwo-logo.png" alt="Lakewoods Office Solutions" loading="lazy" className="mb-6 w-44" />
           <p className="max-w-xs text-sm leading-7 text-white/60">
             Commercial office solutions, installed with precision. Serving businesses nationwide.
           </p>

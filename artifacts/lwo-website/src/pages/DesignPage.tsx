@@ -2,6 +2,21 @@ import { ClipboardCheck, DraftingCompass, Hammer, CheckCircle2 } from 'lucide-re
 import ServiceTemplate, { type ServiceConfig } from '@/components/ServiceTemplate';
 
 const config: ServiceConfig = {
+  seo: {
+    title: 'Commercial Office Design & Custom Furniture | Lakewoods Office Solutions',
+    description: 'Bespoke commercial workspace design and custom furniture fabrication. Space planning, brand-aligned interiors, ergonomic layouts, and turnkey project management nationwide.',
+    canonical: '/services/commercial-design-furniture',
+    ogImage: 'https://www.lwosolutions.com/images/lwo-design.png',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Commercial Office Design & Custom Furniture',
+      description: 'Bespoke commercial workspace design and custom furniture fabrication — space planning, brand-aligned interiors, and turnkey project management.',
+      provider: { '@type': 'LocalBusiness', '@id': 'https://www.lwosolutions.com/#business', name: 'Lakewoods Office Solutions' },
+      areaServed: { '@type': 'Country', name: 'United States' },
+      url: 'https://www.lwosolutions.com/services/commercial-design-furniture',
+    },
+  },
   label: 'WORKSPACE DESIGN SPECIALISTS',
   title: 'Commercial Design & Furniture',
   intro: 'Bespoke commercial space design and custom furniture building — from concept to installation, we shape workspaces that reflect your brand and drive productivity.',

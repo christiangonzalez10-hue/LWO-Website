@@ -1,7 +1,27 @@
 import { ArrowUpRight, Heart, Lightbulb, Target } from 'lucide-react';
 import { Footer, SectionMark, SiteHeader } from '@/components/SiteChrome';
+import { useSEO } from '@/hooks/useSEO';
 
 export default function AboutPage() {
+  useSEO({
+    title: 'About Lakewoods Office Solutions | Utah-Based Family-Owned Office Services',
+    description: 'Family-owned and Utah-based, Lakewoods Office Solutions revolutionizes business office environments with innovative, personalized workspace solutions nationwide.',
+    canonical: '/about',
+    ogImage: 'https://www.lwosolutions.com/images/lwo-about.jpg',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
+      name: 'About Lakewoods Office Solutions',
+      description: 'Family-owned and Utah-based, Lakewoods Office Solutions is committed to revolutionizing the way businesses think about their office environments.',
+      url: 'https://www.lwosolutions.com/about',
+      about: {
+        '@type': 'LocalBusiness',
+        '@id': 'https://www.lwosolutions.com/#business',
+        name: 'Lakewoods Office Solutions',
+      },
+    },
+  });
+
   return (
     <main className="min-h-screen bg-white font-['Montserrat'] text-[#4E4B66]">
       <SiteHeader />
@@ -26,7 +46,8 @@ export default function AboutPage() {
         <div className="relative min-h-[380px] overflow-hidden bg-[#1A1A1A]">
           <img
             src="/images/lwo-about.jpg"
-            alt="Lakewoods Office Solutions team"
+            alt="Lakewoods Office Solutions team collaborating in a Utah office"
+            loading="lazy"
             className="h-full w-full object-cover opacity-70"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/60 to-transparent" />
@@ -82,7 +103,7 @@ export default function AboutPage() {
               Icon: Lightbulb,
               label: 'OUR VISION',
               heading: 'The leading choice for business.',
-              body: 'To be the leading choice for businesses seeking office solutions, recognized for our innovation, commitment to sustainability, and focus on customer success. We aim to make a positive impact on both our clients\u2019 businesses and the wider community.',
+              body: "To be the leading choice for businesses seeking office solutions, recognized for our innovation, commitment to sustainability, and focus on customer success. We aim to make a positive impact on both our clients\u2019 businesses and the wider community.",
             },
             {
               Icon: Heart,

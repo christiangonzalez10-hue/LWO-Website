@@ -15,7 +15,7 @@ export function SiteHeader() {
     ['SERVICES', href('#services')],
     ['WHY US', href('#why-us')],
     ['ABOUT', '/about'],
-    ['CONTACT US', '#contact'],
+    ['CONTACT US', '/contact'],
   ];
 
   return (

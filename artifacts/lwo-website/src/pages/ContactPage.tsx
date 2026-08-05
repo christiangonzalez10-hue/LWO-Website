@@ -4,7 +4,8 @@ import { Footer, SiteHeader } from '@/components/SiteChrome';
 import { useSEO } from '@/hooks/useSEO';
 
 // ─── Web3Forms ────────────────────────────────────────────────────────────────
-// Sign up free at https://web3forms.com → copy your Access Key → paste below.
+// Sign up free at https://web3forms.com using contact@lwosolutions.com
+// to receive submissions at that address. Paste your Access Key below.
 // The key is safe to commit (it is not a secret — it is scoped to your domain).
 const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY_HERE';
 // ─────────────────────────────────────────────────────────────────────────────
@@ -233,10 +234,10 @@ export default function ContactPage() {
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[.16em] text-white/50">Email</p>
                 <a
-                  href="mailto:hello@lwosolutions.com"
+                  href="mailto:contact@lwosolutions.com"
                   className="mt-1 block text-sm text-white hover:text-[#C9A96E] transition-colors"
                 >
-                  hello@lwosolutions.com
+                  contact@lwosolutions.com
                 </a>
               </div>
             </div>

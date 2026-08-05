@@ -7,7 +7,7 @@ import { useSEO } from '@/hooks/useSEO';
 // Sign up free at https://web3forms.com using contact@lwosolutions.com
 // to receive submissions at that address. Paste your Access Key below.
 // The key is safe to commit (it is not a secret — it is scoped to your domain).
-const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY_HERE';
+const WEB3FORMS_KEY = '700758c1-82d4-4b03-9915-3f2ac03650ea';
 // ─────────────────────────────────────────────────────────────────────────────
 
 const SERVICES = [

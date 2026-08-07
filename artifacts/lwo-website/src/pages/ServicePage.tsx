@@ -16,6 +16,7 @@ const faqs: [string, string][] = [
   ['CAN YOU INSTALL FURNITURE PURCHASED FROM ANOTHER VENDOR?', 'Yes. We regularly install dealer-supplied and client-supplied systems. Before we begin, we confirm specifications, site readiness, and the installation sequence.'],
   ['HOW FAR IN ADVANCE SHOULD WE SCHEDULE?', 'Most projects are best scheduled four to six weeks ahead. For urgent openings or phased rollouts, contact us early and we will build the most practical plan around your date.'],
   ['DO YOU SUPPORT MULTI-LOCATION ROLLOUTS?', 'Absolutely. Our centralized project communication keeps standards consistent across offices and locations throughout Utah and the Mountain West.'],
+  ['DO YOU SERVE AREAS OUTSIDE SALT LAKE CITY?', 'Yes. We\'re based in Salt Lake City and install for businesses across the Wasatch Front — including Sandy, Lehi, Provo, Ogden, and Park City — and throughout Utah. If you\'re planning an office project in the region, we can help.'],
 ];
 
 const steps: [string, string, string, LucideIcon][] = [
@@ -52,12 +53,12 @@ export default function ServicePage() {
       <section className="mx-auto max-w-5xl px-5 py-20 text-center md:py-28">
         <p className="text-xs font-bold uppercase tracking-[.28em] text-[#1F8080]">OFFICE INSTALLATION SERVICES</p>
         <h1 className="mt-7 text-3xl font-bold uppercase leading-[1.3] tracking-[.18em] text-[#1F8080] md:text-5xl">
-          Office Furniture<br />Installation
+          Office Furniture<br />Installation in<br />Salt Lake City
         </h1>
         <div className="mx-auto mt-8 h-px w-20 bg-[#C9A96E]" />
         <p className="mx-auto mt-8 max-w-2xl text-sm leading-8">
           From first delivery to final alignment, Lakewoods makes sure your office furniture arrives,
-          assembles, and performs exactly as planned.
+          assembles, and performs exactly as planned — for businesses across Salt Lake City and the Wasatch Front.
         </p>
         <a
           href="mailto:contact@lwosolutions.com"
@@ -90,12 +91,15 @@ export default function ServicePage() {
           <p className="mt-7 text-sm leading-8">
             Office furniture installation is more than putting pieces together. It is the final
             expression of your space plan — and a critical moment for your schedule, budget, and
-            employee experience.
+            employee experience. We install for offices throughout Salt Lake City, Sandy, Lehi,
+            Provo, and the surrounding Utah market — coordinating around your schedule to keep
+            downtime to a minimum.
           </p>
           <div className="mt-8 grid gap-4">
             {[
               'Dealer and client-supplied furniture',
-              'Workstations, desks, and conference rooms',
+              'Workstations, desks, cubicles, and conference rooms',
+              'Systems furniture, panel systems & workstation reconfiguration',
               'Inventory, assembly, and placement',
               'Punch-list and closeout support',
             ].map((item) => (
@@ -172,6 +176,9 @@ export default function ServicePage() {
         >
           REQUEST A CONSULTATION <ArrowUpRight size={15} />
         </a>
+        <p className="mt-6 text-xs text-[#4E4B66]/70">
+          Proudly serving Salt Lake City, Sandy, Lehi, Provo, Ogden, Park City, and businesses across Utah.
+        </p>
       </section>
 
       <Footer />

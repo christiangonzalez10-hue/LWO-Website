@@ -17,7 +17,7 @@ run = "pnpm --filter @workspace/lwo-website run dev"
 [services.production]
 build = [ "pnpm", "--filter", "@workspace/lwo-website", "run", "build" ]
 serve = "static"
-publicDir = "artifacts/lwo-website/dist/public"
+publicDir = "artifacts/lwo-website/dist"
 
 [[services.production.rewrites]]
 from = "/*"

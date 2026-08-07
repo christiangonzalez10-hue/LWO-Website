@@ -1,0 +1,22 @@
+# Lakewoods Office Solutions
+
+> Lakewoods Office Solutions is a commercial workplace services company based in Salt Lake City, Utah. We design, furnish, install, and relocate office environments for businesses across Utah and the Mountain West. Our work spans office installations, commercial moving, storage, painting, furniture and space design, and full-scale commercial relocation.
+
+## Company
+
+- [Home](https://www.lwosolutions.com/): Overview of services, differentiators, and contact information.
+- [About Us](https://www.lwosolutions.com/about): Background on Lakewoods Office Solutions, our values, and the team behind our work.
+- [Contact](https://www.lwosolutions.com/contact): Reach us by phone at (801) 712-5772 or email at contact@lwosolutions.com. We serve businesses in Salt Lake City, Utah, and throughout the Mountain West.
+
+## Services
+
+- [Office Installations](https://www.lwosolutions.com/services/office-installations): Professional installation of workstations, cubicles, panel systems, conference rooms, and all office furniture and equipment.
+- [Commercial Storage](https://www.lwosolutions.com/services/commercial-storage): Secure, climate-controlled storage solutions for office furniture, equipment, and assets during transitions or renovations.
+- [Commercial Moving](https://www.lwosolutions.com/services/commercial-moving): Full-service commercial moving for offices, including planning, packing, transport, and reassembly with minimal business disruption.
+- [Commercial Painting](https://www.lwosolutions.com/services/commercial-painting): Interior and exterior commercial painting for offices and commercial spaces, including surface prep, color consultation, and finishing.
+- [Commercial Design & Furniture](https://www.lwosolutions.com/services/commercial-design-furniture): Space planning, furniture selection, and interior design for productive and professional commercial environments.
+- [Commercial Relocation](https://www.lwosolutions.com/services/commercial-relocation): End-to-end relocation management for businesses moving offices — from planning and logistics through installation and setup at the new location.
+
+## Service Area
+
+Lakewoods Office Solutions is headquartered in Salt Lake City, Utah and primarily serves clients throughout Utah and the surrounding Mountain West region.

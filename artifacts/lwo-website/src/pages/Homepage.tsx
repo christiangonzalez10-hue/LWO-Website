@@ -177,7 +177,7 @@ export default function Homepage() {
             ].map(([t, b]) => (
               <div key={t} className="border-t border-[#d8d0c3] pt-4">
                 <Check size={14} className="mb-3 text-[#C9A96E]" />
-                <p className="text-xs font-bold uppercase tracking-[.1em] text-[#1A1A1A]">{t}</p>
+                <h3 className="text-xs font-bold uppercase tracking-[.1em] text-[#1A1A1A]">{t}</h3>
                 <p className="mt-2 text-xs leading-6 text-[#4E4B66]">{b}</p>
               </div>
             ))}

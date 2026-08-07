@@ -227,7 +227,7 @@ export default function ContactPage() {
 
         {/* Contact Info sidebar */}
         <div className="bg-[#1A1A1A] px-10 py-14 text-white">
-          <p className="text-[10px] font-bold uppercase tracking-[.24em] text-[#C9A96E]">CONTACT DETAILS</p>
+          <h3 className="text-[10px] font-bold uppercase tracking-[.24em] text-[#C9A96E]">CONTACT DETAILS</h3>
           <div className="mt-8 flex flex-col gap-8">
             <div className="flex items-start gap-4">
               <Mail size={18} className="mt-0.5 shrink-0 text-[#C9A96E]" strokeWidth={1.5} />
@@ -264,7 +264,7 @@ export default function ContactPage() {
           </div>
 
           <div className="mt-14 border-t border-white/15 pt-10">
-            <p className="text-[10px] font-bold uppercase tracking-[.24em] text-[#C9A96E]">RESPONSE TIME</p>
+            <h3 className="text-[10px] font-bold uppercase tracking-[.24em] text-[#C9A96E]">RESPONSE TIME</h3>
             <p className="mt-4 text-sm leading-7 text-white/70">
               We respond to all inquiries within <span className="font-semibold text-white">one business day</span>.
               For urgent projects, call us directly.
@@ -272,7 +272,7 @@ export default function ContactPage() {
           </div>
 
           <div className="mt-10 border-t border-white/15 pt-10">
-            <p className="text-[10px] font-bold uppercase tracking-[.24em] text-[#C9A96E]">OUR SERVICES</p>
+            <h3 className="text-[10px] font-bold uppercase tracking-[.24em] text-[#C9A96E]">OUR SERVICES</h3>
             <div className="mt-4 flex flex-col gap-2">
               {SERVICES.slice(0, 6).map((s) => (
                 <p key={s} className="text-xs text-white/60">{s}</p>

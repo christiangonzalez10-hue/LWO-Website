@@ -77,7 +77,7 @@ export default function AboutPage() {
           </p>
           <a
             href="mailto:contact@lwosolutions.com"
-            className="mt-9 inline-flex w-fit items-center gap-3 bg-[#F46D0B] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#d95d07]"
+            className="mt-9 inline-flex w-fit items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
           >
             GET IN TOUCH <ArrowUpRight size={15} />
           </a>
@@ -141,7 +141,7 @@ export default function AboutPage() {
         </h2>
         <a
           href="mailto:contact@lwosolutions.com"
-          className="mt-9 inline-flex items-center gap-3 bg-[#F46D0B] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#d95d07]"
+          className="mt-9 inline-flex items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
         >
           REQUEST A CONSULTATION <ArrowUpRight size={15} />
         </a>

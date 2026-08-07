@@ -11,7 +11,7 @@ export default function NotFound() {
       </p>
       <a
         href="/"
-        className="mt-9 inline-flex items-center gap-3 bg-[#F46D0B] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#d95d07]"
+        className="mt-9 inline-flex items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
       >
         BACK TO HOME <ArrowUpRight size={15} />
       </a>

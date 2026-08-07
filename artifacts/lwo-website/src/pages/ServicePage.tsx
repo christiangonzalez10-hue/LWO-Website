@@ -61,7 +61,7 @@ export default function ServicePage() {
         </p>
         <a
           href="mailto:contact@lwosolutions.com"
-          className="mt-9 inline-flex items-center gap-3 bg-[#F46D0B] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#d95d07]"
+          className="mt-9 inline-flex items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
         >
           CALL NOW <ArrowUpRight size={15} />
         </a>
@@ -103,7 +103,7 @@ export default function ServicePage() {
                 key={item}
                 className="flex items-start gap-3 text-xs font-bold uppercase tracking-[.1em] text-[#1F8080]"
               >
-                <CheckCircle2 size={17} className="shrink-0 text-[#C9A96E]" />
+                <CheckCircle2 size={17} className="shrink-0 text-[#1F8080]" />
                 {item}
               </div>
             ))}
@@ -124,8 +124,8 @@ export default function ServicePage() {
         <div className="mt-14 grid gap-px border border-[#d8d0c3] bg-[#d8d0c3] md:grid-cols-4">
           {steps.map(([num, title, body, Icon]) => (
             <div key={title} className="bg-white p-7 text-center">
-              <Icon size={25} className="mx-auto text-[#C9A96E]" />
-              <p className="mt-8 text-xs font-bold tracking-[.2em] text-[#C9A96E]">{num}</p>
+              <Icon size={25} className="mx-auto text-[#1F8080]" />
+              <p className="mt-8 text-xs font-bold tracking-[.2em] text-[#1F8080]">{num}</p>
               <h3 className="mt-3 text-sm font-bold tracking-[.14em] text-[#1F8080]">{title}</h3>
               <p className="mt-4 text-sm leading-7">{body}</p>
             </div>
@@ -151,7 +151,7 @@ export default function ServicePage() {
                 {q}
                 <ChevronDown
                   size={17}
-                  className={`shrink-0 text-[#C9A96E] transition-transform ${active === i ? 'rotate-180' : ''}`}
+                  className={`shrink-0 text-[#1F8080] transition-transform ${active === i ? 'rotate-180' : ''}`}
                 />
               </button>
               {active === i && <p className="pb-6 pr-8 text-sm leading-7">{a}</p>}
@@ -168,7 +168,7 @@ export default function ServicePage() {
         </h2>
         <a
           href="mailto:contact@lwosolutions.com"
-          className="mt-9 inline-flex items-center gap-3 bg-[#F46D0B] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#d95d07]"
+          className="mt-9 inline-flex items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
         >
           REQUEST A CONSULTATION <ArrowUpRight size={15} />
         </a>

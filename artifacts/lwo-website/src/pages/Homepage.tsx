@@ -72,7 +72,7 @@ export default function Homepage() {
         </p>
         <a
           href="mailto:contact@lwosolutions.com"
-          className="mt-9 inline-flex items-center gap-3 bg-[#F46D0B] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#d95d07]"
+          className="mt-9 inline-flex items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
         >
           CALL NOW <ArrowUpRight size={15} />
         </a>
@@ -96,14 +96,14 @@ export default function Homepage() {
               className="group bg-white p-8 transition-colors hover:bg-[#fbfaf7]"
             >
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold tracking-[.2em] text-[#C9A96E]">{num}</span>
+                <span className="text-xs font-bold tracking-[.2em] text-[#1F8080]">{num}</span>
                 <Icon size={22} strokeWidth={1.3} className="text-[#1F8080]" />
               </div>
               <h3 className="mt-10 text-sm font-bold uppercase leading-6 tracking-[.12em] text-[#1F8080]">
                 {title}
               </h3>
               <p className="mt-4 text-sm leading-7">{body}</p>
-              <p className="mt-5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.15em] text-[#C9A96E]">
+              <p className="mt-5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[.15em] text-[#1F8080]">
                 Learn more <ArrowUpRight size={13} />
               </p>
             </a>
@@ -181,7 +181,7 @@ export default function Homepage() {
               ['Mountain West roots', 'Serving Utah and surrounding states with the same care on every project.'],
             ].map(([t, b]) => (
               <div key={t} className="border-t border-[#d8d0c3] pt-4">
-                <Check size={14} className="mb-3 text-[#C9A96E]" />
+                <Check size={14} className="mb-3 text-[#1F8080]" />
                 <h3 className="text-xs font-bold uppercase tracking-[.1em] text-[#1A1A1A]">{t}</h3>
                 <p className="mt-2 text-xs leading-6 text-[#4E4B66]">{b}</p>
               </div>
@@ -198,7 +198,7 @@ export default function Homepage() {
         </h2>
         <a
           href="mailto:contact@lwosolutions.com"
-          className="mt-9 inline-flex items-center gap-3 bg-[#F46D0B] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#d95d07]"
+          className="mt-9 inline-flex items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
         >
           REQUEST A CONSULTATION <ArrowUpRight size={15} />
         </a>

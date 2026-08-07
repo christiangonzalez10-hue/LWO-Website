@@ -49,7 +49,7 @@ export function SiteHeader() {
           </div>
           <a
             href="mailto:contact@lwosolutions.com"
-            className="hidden items-center gap-2 bg-[#F46D0B] px-5 py-3 text-[9px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#d95d07] md:flex"
+            className="hidden items-center gap-2 bg-[#BF5200] px-5 py-3 text-[9px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00] md:flex"
           >
             CALL NOW
           </a>
@@ -158,7 +158,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="mx-auto mt-12 max-w-7xl border-t border-white/15 pt-5 text-[10px] uppercase tracking-[.18em] text-white/35">
+      <div className="mx-auto mt-12 max-w-7xl border-t border-white/15 pt-5 text-[10px] uppercase tracking-[.18em] text-white/50">
         © 2025 Lakewoods Office Solutions
       </div>
     </footer>

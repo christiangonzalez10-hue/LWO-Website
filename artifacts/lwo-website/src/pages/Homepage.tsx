@@ -142,12 +142,17 @@ export default function Homepage() {
       {/* About */}
       <section id="about" className="mx-auto grid max-w-7xl gap-12 px-5 py-20 lg:grid-cols-2 lg:px-8">
         <div className="relative min-h-[340px] overflow-hidden bg-[#1A1A1A]">
-          <img
-            src="/images/lwo-installation.png"
-            alt="Office furniture installation by Lakewoods team"
-            loading="lazy"
-            className="h-full w-full object-cover opacity-75"
-          />
+          <picture>
+            <source type="image/webp" srcSet="/images/lwo-installation.webp" />
+            <img
+              src="/images/lwo-installation.png"
+              alt="Office furniture installation by Lakewoods team"
+              loading="lazy"
+              width={800}
+              height={800}
+              className="h-full w-full object-cover opacity-75"
+            />
+          </picture>
           <div className="absolute bottom-0 left-0 border-t border-[#C9A96E] bg-[#1A1A1A]/90 px-7 py-5 text-[10px] font-bold uppercase tracking-[.2em] text-[#C9A96E]">
             The Lakewoods standard
           </div>

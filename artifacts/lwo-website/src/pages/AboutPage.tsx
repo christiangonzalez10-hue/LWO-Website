@@ -44,12 +44,17 @@ export default function AboutPage() {
       {/* Image + intro panel */}
       <section className="mx-auto grid max-w-7xl gap-0 border-y border-[#d8d0c3] lg:grid-cols-2">
         <div className="relative min-h-[380px] overflow-hidden bg-[#1A1A1A]">
-          <img
-            src="/images/lwo-about.jpg"
-            alt="Lakewoods Office Solutions team collaborating in a Utah office"
-            loading="lazy"
-            className="h-full w-full object-cover opacity-70"
-          />
+          <picture>
+            <source type="image/webp" srcSet="/images/lwo-about.webp" />
+            <img
+              src="/images/lwo-about.jpg"
+              alt="Lakewoods Office Solutions team collaborating in a Utah office"
+              loading="lazy"
+              width={800}
+              height={800}
+              className="h-full w-full object-cover opacity-70"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/60 to-transparent" />
           <div className="absolute bottom-0 left-0 border-t border-[#C9A96E] bg-[#1A1A1A]/80 px-7 py-5">
             <p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#C9A96E]">

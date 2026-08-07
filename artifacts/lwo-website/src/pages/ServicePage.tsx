@@ -70,12 +70,17 @@ export default function ServicePage() {
       {/* Detail */}
       <section className="mx-auto grid max-w-7xl gap-12 border-y border-[#d8d0c3] px-5 py-16 lg:grid-cols-2 lg:items-center lg:px-8">
         <div>
-          <img
-            src="/images/lwo-installation.png"
-            alt="Professionals installing modern office furniture"
-            loading="lazy"
-            className="h-[220px] w-full object-cover"
-          />
+          <picture>
+            <source type="image/webp" srcSet="/images/lwo-installation.webp" />
+            <img
+              src="/images/lwo-installation.png"
+              alt="Professionals installing modern office furniture"
+              loading="lazy"
+              width={800}
+              height={800}
+              className="h-[220px] w-full object-cover"
+            />
+          </picture>
         </div>
         <div>
           <p className="text-xs font-bold uppercase tracking-[.28em] text-[#1F8080]">INSTALLATION WITHOUT INTERRUPTION</p>

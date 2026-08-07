@@ -201,13 +201,13 @@ const ROUTES = [
   },
   {
     url: '/services/commercial-moving',
-    title: 'Commercial Moving Services | Lakewoods Office Solutions',
+    title: 'Commercial Office Movers in Salt Lake City | Lakewoods',
     description:
-      'Full-service commercial office moving serving Utah and the Mountain West. Pre-move planning, furniture disassembly, IT equipment handling, and after-hours availability.',
+      'Salt Lake City commercial office movers — relocations handled by one team that also installs and stores, minimizing your downtime. Serving Utah & the Wasatch Front.',
     image: `${BASE}/images/lwo-moving.png`,
     jsonLd: svc(
-      'Commercial Moving Services',
-      'Full-service commercial office moving — pre-move planning, furniture disassembly, IT equipment handling, and after-hours scheduling.',
+      'Commercial Office Moving',
+      'Commercial office movers in Salt Lake City — moving, furniture installation, and storage coordinated by one integrated team to minimize downtime across the Wasatch Front.',
       '/services/commercial-moving',
     ),
   },

@@ -13,6 +13,8 @@ export type ServiceConfig = {
   benefits: string[];
   process: [string, string, string, LucideIcon][];
   faqs: [string, string][];
+  /** Optional line rendered below the CTA button — e.g. a service-area callout */
+  serviceAreaLine?: string;
 };
 
 export default function ServiceTemplate({ config }: { config: ServiceConfig }) {
@@ -140,6 +142,9 @@ export default function ServiceTemplate({ config }: { config: ServiceConfig }) {
         >
           REQUEST A CONSULTATION <ArrowUpRight size={15} />
         </a>
+        {config.serviceAreaLine && (
+          <p className="mt-6 text-xs text-[#4E4B66]/70">{config.serviceAreaLine}</p>
+        )}
       </section>
 
       <Footer />

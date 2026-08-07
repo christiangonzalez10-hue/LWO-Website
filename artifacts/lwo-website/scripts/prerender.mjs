@@ -213,37 +213,37 @@ const ROUTES = [
   },
   {
     url: '/services/commercial-painting',
-    title: 'Commercial Painting Services | Lakewoods Office Solutions',
+    title: 'Commercial Painting Services in Salt Lake City | Lakewoods',
     description:
-      'Professional commercial office painting — interior and exterior, low-VOC options, brand-aligned color consulting, and after-hours scheduling to minimize business disruption.',
+      'Commercial office painting in Salt Lake City — brand colors, low-VOC options, after-hours scheduling. Serving businesses across Utah & the Wasatch Front.',
     image: `${BASE}/images/lwo-painting.png`,
     jsonLd: svc(
       'Commercial Painting Services',
-      'Professional commercial painting — interior and exterior, low-VOC options, color consulting, and after-hours scheduling.',
+      'Professional commercial painting in Salt Lake City — interior and exterior, low-VOC options, brand-aligned color consulting, and after-hours scheduling across the Wasatch Front.',
       '/services/commercial-painting',
     ),
   },
   {
     url: '/services/commercial-design-furniture',
-    title: 'Commercial Office Design & Custom Furniture | Lakewoods Office Solutions',
+    title: 'Commercial Office Design in Salt Lake City | Lakewoods',
     description:
-      'Bespoke commercial workspace design and custom furniture fabrication. Space planning, brand-aligned interiors, ergonomic layouts, and turnkey project management in Utah and the Mountain West.',
+      'Office design and custom furniture for Salt Lake City businesses — space planning, brand-aligned interiors, and turnkey installation. Serving Utah & the Wasatch Front.',
     image: `${BASE}/images/lwo-design.png`,
     jsonLd: svc(
       'Commercial Office Design & Custom Furniture',
-      'Bespoke commercial workspace design and custom furniture fabrication — space planning, brand-aligned interiors, and turnkey project management.',
+      'Bespoke commercial workspace design and custom furniture for Salt Lake City businesses — space planning, brand-aligned interiors, ergonomic layouts, and turnkey installation across the Wasatch Front.',
       '/services/commercial-design-furniture',
     ),
   },
   {
     url: '/services/commercial-relocation',
-    title: 'Commercial Office Relocation Services | Lakewoods Office Solutions',
+    title: 'Office Relocation Services in Salt Lake City | Lakewoods',
     description:
-      'End-to-end commercial office relocation management — site surveys, vendor coordination, decommissioning, multi-site moves, and complete setup at your new location. Serving Utah and the Mountain West.',
+      'End-to-end office relocation in Salt Lake City — one coordinated team for moving, storage, and setup. Serving Utah & the Wasatch Front.',
     image: `${BASE}/images/lwo-relocation.png`,
     jsonLd: svc(
       'Commercial Office Relocation Services',
-      'End-to-end office relocation management — site surveys, vendor coordination, decommissioning, and complete setup at the new location.',
+      'End-to-end office relocation management in Salt Lake City — site surveys, vendor coordination, moving, storage, furniture installation, and complete setup across the Wasatch Front.',
       '/services/commercial-relocation',
     ),
   },

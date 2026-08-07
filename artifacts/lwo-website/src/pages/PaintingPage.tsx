@@ -3,44 +3,70 @@ import ServiceTemplate, { type ServiceConfig } from '@/components/ServiceTemplat
 
 const config: ServiceConfig = {
   seo: {
-    title: 'Commercial Painting Services | Lakewoods Office Solutions',
-    description: 'Professional commercial office painting — interior and exterior, low-VOC options, brand-aligned color consulting, and after-hours scheduling to minimize business disruption.',
+    title: 'Commercial Painting Services in Salt Lake City | Lakewoods',
+    description:
+      'Commercial office painting in Salt Lake City — brand colors, low-VOC options, after-hours scheduling. Serving businesses across Utah & the Wasatch Front.',
     canonical: '/services/commercial-painting',
     ogImage: 'https://www.lwosolutions.com/images/lwo-painting.png',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'Service',
       name: 'Commercial Painting Services',
-      description: 'Professional commercial painting — interior and exterior, low-VOC options, color consulting, and after-hours scheduling.',
-      provider: { '@type': 'LocalBusiness', '@id': 'https://www.lwosolutions.com/#business', name: 'Lakewoods Office Solutions' },
-      areaServed: { '@type': 'Country', name: 'United States' },
+      description:
+        'Professional commercial painting in Salt Lake City — interior and exterior, low-VOC options, brand-aligned color consulting, and after-hours scheduling across the Wasatch Front.',
+      provider: {
+        '@type': 'LocalBusiness',
+        '@id': 'https://www.lwosolutions.com/#business',
+        name: 'Lakewoods Office Solutions',
+      },
+      areaServed: { '@type': 'State', name: 'Utah' },
       url: 'https://www.lwosolutions.com/services/commercial-painting',
     },
   },
-  label: 'PROFESSIONAL WORKSPACE PAINTING',
-  title: 'Commercial Painting Services',
-  intro: 'Professional commercial painting that transforms your workspace — precise application, minimal disruption, and finishes built to last.',
+  label: 'COMMERCIAL PAINTING — SALT LAKE CITY',
+  title: 'Commercial Painting Services in Salt Lake City',
+  intro:
+    'Professional commercial painting that transforms your workspace — precise application, minimal disruption, and finishes built to last, for offices across Salt Lake City and the Wasatch Front.',
   image: '/images/lwo-painting.png',
   imageAlt: 'Professional painters in a bright commercial office',
   benefits: [
     'Interior and exterior commercial painting',
     'Color consultation and brand alignment',
     'Low-VOC and eco-friendly paint options',
-    'After-hours scheduling to minimize downtime',
+    'After-hours and weekend scheduling — keep your team productive',
     'Surface prep, priming, and finishing included',
+    'Coordinated with moves and renovations — one team, less downtime',
   ],
   process: [
-    ['01', 'CONSULT', 'We discuss your goals, palette, surfaces, and schedule.', DraftingCompass],
-    ['02', 'PREP', 'Thorough protection, patching, sanding, and priming set up a clean finish.', ClipboardCheck],
-    ['03', 'PAINT', 'Our team applies consistent coats with care around every detail.', Paintbrush],
-    ['04', 'INSPECT', 'We review the work with you and address the final details.', CheckCircle2],
+    ['01', 'CONSULT', 'We discuss your goals, palette, surfaces, and schedule — working around your Salt Lake City business hours.', DraftingCompass],
+    ['02', 'PREP', 'Thorough protection, patching, sanding, and priming set up a clean, lasting finish.', ClipboardCheck],
+    ['03', 'PAINT', 'Our team applies consistent coats with care around every detail and surface.', Paintbrush],
+    ['04', 'INSPECT', 'We walk the space with you, address every punch-list item, and leave it ready.', CheckCircle2],
   ],
   faqs: [
-    ['Can you paint after hours?', 'Yes. We regularly schedule evening and weekend work to protect your team\u2019s productivity.'],
-    ['Do you offer color consulting?', 'Yes. We help translate your brand and workplace goals into a considered, practical palette.'],
-    ['What paint brands do you use?', 'We specify professional-grade products selected for durability, coverage, low odor, and the needs of your space.'],
-    ['How long does a typical commercial project take?', 'Timing depends on scope and surfaces; after a walkthrough, we provide a clear schedule and phased plan.'],
+    [
+      'Can you paint after hours or on weekends?',
+      'Yes. We regularly schedule evening and weekend work so your Salt Lake City team never loses a productive day. After-hours availability is standard for us, not an exception.',
+    ],
+    [
+      'Do you offer color consulting?',
+      'Yes. We help translate your brand and workplace goals into a considered, practical palette — including options that work across lighting conditions common in Utah office buildings.',
+    ],
+    [
+      'Can painting be combined with a move or renovation?',
+      'Absolutely. Because we also handle office moving and furniture installation, painting can be sequenced into a broader transition — one coordinated team means fewer scheduling conflicts and less downtime.',
+    ],
+    [
+      'What paint brands and products do you use?',
+      'We specify professional-grade products selected for durability, coverage, low odor, and the specific demands of your space.',
+    ],
+    [
+      'Do you serve areas outside Salt Lake City?',
+      "Yes. We're based in Salt Lake City and paint for businesses across the Wasatch Front — including Sandy, Lehi, Provo, Ogden, and Park City — and throughout Utah.",
+    ],
   ],
+  serviceAreaLine:
+    'Proudly serving Salt Lake City, Sandy, Lehi, Provo, Ogden, Park City, and businesses across Utah.',
 };
 
 export default function PaintingPage() {

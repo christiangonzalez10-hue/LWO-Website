@@ -27,12 +27,12 @@ const LOCAL_BUSINESS_JSONLD = {
   '@type': 'LocalBusiness',
   '@id': 'https://www.lwosolutions.com/#business',
   name: 'Lakewoods Office Solutions',
-  description: 'Family-owned commercial office solutions — furniture installation, moving, painting, space planning, and relocation. Utah-based, serving businesses nationwide.',
+  description: 'Family-owned commercial office solutions — furniture installation, moving, painting, and space planning. Proudly serving Utah and the surrounding Mountain West.',
   url: 'https://www.lwosolutions.com',
   email: 'contact@lwosolutions.com',
   logo: 'https://www.lwosolutions.com/images/lwo-logo.png',
   image: 'https://www.lwosolutions.com/images/lwo-hero.png',
-  areaServed: { '@type': 'Country', name: 'United States' },
+  areaServed: { '@type': 'State', name: 'Utah' },
   address: { '@type': 'PostalAddress', addressRegion: 'UT', addressCountry: 'US' },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
@@ -51,7 +51,7 @@ const LOCAL_BUSINESS_JSONLD = {
 export default function Homepage() {
   useSEO({
     title: 'Office Furniture Installation & Workspace Design | Lakewoods Office Solutions',
-    description: 'Lakewoods Office Solutions — Utah-based, family-owned commercial office services: furniture installation, moving, painting, space planning, and relocation nationwide.',
+    description: 'Family-owned commercial office solutions — furniture installation, moving, painting, and space planning. Proudly serving Utah and the surrounding Mountain West.',
     canonical: '/',
     jsonLd: LOCAL_BUSINESS_JSONLD,
   });
@@ -68,9 +68,7 @@ export default function Homepage() {
           <span className="text-[#1F8080]">Elevating work.</span>
         </h1>
         <p className="mx-auto mt-8 max-w-2xl text-sm leading-8">
-          We provide complete commercial office solutions for businesses nationwide — from office
-          furniture installation and cubicle systems to workplace design, relocation, and ergonomic
-          planning.
+          Family-owned commercial office solutions — furniture installation, moving, painting, and space planning. Proudly serving Utah and the surrounding Mountain West.
         </p>
         <a
           href="mailto:contact@lwosolutions.com"
@@ -127,7 +125,7 @@ export default function Homepage() {
           <div className="mt-12 grid gap-8 text-left md:grid-cols-3">
             {[
               ['25+', 'Years of experience'],
-              ['NATIONWIDE', 'Consistent project delivery'],
+              ['MOUNTAIN WEST', 'Serving Utah & surrounding states'],
               ['ONE TEAM', 'Planning through closeout'],
             ].map(([large, small]) => (
               <div key={large} className="border-t-2 border-[#C9A96E] pt-5">
@@ -175,7 +173,7 @@ export default function Homepage() {
               ['One accountable team', 'Planning, logistics, installation, and closeout aligned from day one.'],
               ['Built around your deadline', 'A clear schedule and proactive communication keep your opening on track.'],
               ['Craft over shortcuts', 'Every workstation leveled, every cable considered, every room ready.'],
-              ['Nationwide reach', 'Consistent execution for regional teams and national rollouts alike.'],
+              ['Mountain West roots', 'Serving Utah and surrounding states with the same care on every project.'],
             ].map(([t, b]) => (
               <div key={t} className="border-t border-[#d8d0c3] pt-4">
                 <Check size={14} className="mb-3 text-[#C9A96E]" />

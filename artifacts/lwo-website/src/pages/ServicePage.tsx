@@ -15,7 +15,7 @@ const faqs: [string, string][] = [
   ['WHAT DOES YOUR OFFICE FURNITURE INSTALLATION SERVICE INCLUDE?', 'Our team handles receiving, inventory, assembly, placement, leveling, punch-list corrections, and removal of packaging. We coordinate directly with your furniture dealer or general contractor.'],
   ['CAN YOU INSTALL FURNITURE PURCHASED FROM ANOTHER VENDOR?', 'Yes. We regularly install dealer-supplied and client-supplied systems. Before we begin, we confirm specifications, site readiness, and the installation sequence.'],
   ['HOW FAR IN ADVANCE SHOULD WE SCHEDULE?', 'Most projects are best scheduled four to six weeks ahead. For urgent openings or phased rollouts, contact us early and we will build the most practical plan around your date.'],
-  ['DO YOU SUPPORT MULTI-LOCATION ROLLOUTS?', 'Absolutely. Our nationwide network and centralized project communication keep standards consistent across offices, cities, and time zones.'],
+  ['DO YOU SUPPORT MULTI-LOCATION ROLLOUTS?', 'Absolutely. Our centralized project communication keeps standards consistent across offices and locations throughout Utah and the Mountain West.'],
 ];
 
 const steps: [string, string, string, LucideIcon][] = [
@@ -30,7 +30,7 @@ export default function ServicePage() {
 
   useSEO({
     title: 'Office Furniture Installation Services | Lakewoods Office Solutions',
-    description: 'Professional office furniture installation for businesses nationwide. Expert assembly, placement, leveling, and punch-list support for workstations, desks, panels, and conference rooms.',
+    description: 'Professional office furniture installation serving Utah and the Mountain West. Expert assembly, placement, leveling, and punch-list support for workstations, desks, panels, and conference rooms.',
     canonical: '/services/office-installations',
     ogImage: 'https://www.lwosolutions.com/images/lwo-installation.png',
     jsonLd: {

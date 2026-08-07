@@ -258,7 +258,7 @@ export default function ContactPage() {
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[.16em] text-white/50">Based in</p>
                 <p className="mt-1 text-sm text-white">Utah, United States</p>
-                <p className="mt-1 text-xs text-white/50">Serving businesses nationwide</p>
+                <p className="mt-1 text-xs text-white/50">Proudly serving Utah & the Mountain West</p>
               </div>
             </div>
           </div>

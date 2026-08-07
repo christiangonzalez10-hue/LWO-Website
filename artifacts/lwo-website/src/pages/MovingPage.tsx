@@ -4,7 +4,7 @@ import ServiceTemplate, { type ServiceConfig } from '@/components/ServiceTemplat
 const config: ServiceConfig = {
   seo: {
     title: 'Commercial Moving Services | Lakewoods Office Solutions',
-    description: 'Full-service commercial office moving for businesses of every size. Pre-move planning, furniture disassembly, IT equipment handling, and after-hours availability nationwide.',
+    description: 'Full-service commercial office moving serving Utah and the Mountain West. Pre-move planning, furniture disassembly, IT equipment handling, and after-hours availability.',
     canonical: '/services/commercial-moving',
     ogImage: 'https://www.lwosolutions.com/images/lwo-moving.png',
     jsonLd: {

@@ -4,7 +4,7 @@ import ServiceTemplate, { type ServiceConfig } from '@/components/ServiceTemplat
 const config: ServiceConfig = {
   seo: {
     title: 'Commercial Office Relocation Services | Lakewoods Office Solutions',
-    description: 'End-to-end commercial office relocation management — site surveys, vendor coordination, decommissioning, multi-site moves, and complete setup at your new location nationwide.',
+    description: 'End-to-end commercial office relocation management — site surveys, vendor coordination, decommissioning, multi-site moves, and complete setup at your new location. Serving Utah and the Mountain West.',
     canonical: '/services/commercial-relocation',
     ogImage: 'https://www.lwosolutions.com/images/lwo-relocation.png',
     jsonLd: {

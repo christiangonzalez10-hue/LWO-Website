@@ -4,7 +4,7 @@ import ServiceTemplate, { type ServiceConfig } from '@/components/ServiceTemplat
 const config: ServiceConfig = {
   seo: {
     title: 'Commercial Office Design & Custom Furniture | Lakewoods Office Solutions',
-    description: 'Bespoke commercial workspace design and custom furniture fabrication. Space planning, brand-aligned interiors, ergonomic layouts, and turnkey project management nationwide.',
+    description: 'Bespoke commercial workspace design and custom furniture fabrication. Space planning, brand-aligned interiors, ergonomic layouts, and turnkey project management in Utah and the Mountain West.',
     canonical: '/services/commercial-design-furniture',
     ogImage: 'https://www.lwosolutions.com/images/lwo-design.png',
     jsonLd: {

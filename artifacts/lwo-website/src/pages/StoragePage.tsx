@@ -4,7 +4,7 @@ import ServiceTemplate, { type ServiceConfig } from '@/components/ServiceTemplat
 const config: ServiceConfig = {
   seo: {
     title: 'Commercial Storage Solutions | Lakewoods Office Solutions',
-    description: 'Secure, organized commercial storage for business assets, inventory, documents, and equipment. Flexible short- and long-term options with full inventory tracking nationwide.',
+    description: 'Secure, organized commercial storage for business assets, inventory, documents, and equipment. Flexible short- and long-term options serving Utah and the Mountain West.',
     canonical: '/services/commercial-storage',
     ogImage: 'https://www.lwosolutions.com/images/lwo-storage.png',
     jsonLd: {

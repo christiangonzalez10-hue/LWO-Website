@@ -5,7 +5,7 @@ import { useSEO } from '@/hooks/useSEO';
 export default function AboutPage() {
   useSEO({
     title: 'About Lakewoods Office Solutions | Utah-Based Family-Owned Office Services',
-    description: 'Family-owned and Utah-based, Lakewoods Office Solutions revolutionizes business office environments with innovative, personalized workspace solutions nationwide.',
+    description: 'Family-owned and Utah-based, Lakewoods Office Solutions delivers furniture installation, moving, painting, and space planning across Utah and the Mountain West.',
     canonical: '/about',
     ogImage: 'https://www.lwosolutions.com/images/lwo-about.jpg',
     jsonLd: {
@@ -53,7 +53,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/60 to-transparent" />
           <div className="absolute bottom-0 left-0 border-t border-[#C9A96E] bg-[#1A1A1A]/80 px-7 py-5">
             <p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#C9A96E]">
-              Family owned · Utah based · Nationwide reach
+              Family owned · Utah based · Mountain West
             </p>
           </div>
         </div>
@@ -66,8 +66,8 @@ export default function AboutPage() {
           </h2>
           <p className="mt-7 text-sm leading-8">
             Being family owned means every client relationship is personal to us. We bring the
-            care and accountability of a small business with the capability and reach of a
-            national provider — so no matter the size of your project, you work with people who
+            care and accountability of a small business with the expertise to handle projects of
+            any scale — so no matter the size of your project, you work with people who
             genuinely care about the outcome.
           </p>
           <a

@@ -67,28 +67,30 @@ export function SiteHeader() {
           </nav>
         )}
       </div>
-      <section
-        id="home"
-        className="relative flex min-h-[min(75vh,640px)] items-center justify-center overflow-hidden bg-[#1A1A1A]"
-      >
-        <img
-          src="/images/lwo-hero.png"
-          alt="Moody architectural office building exterior"
-          fetchPriority="high"
-          className="absolute inset-0 h-full w-full object-cover opacity-70"
-        />
-        <div className="absolute inset-0 bg-[#0b0d0d]/55" />
-        <div className="relative z-10 flex flex-col items-center px-5 text-center">
+      {isHome && (
+        <section
+          id="home"
+          className="relative flex min-h-[min(75vh,640px)] items-center justify-center overflow-hidden bg-[#1A1A1A]"
+        >
           <img
-            src="/images/lwo-logo.png"
-            alt="Lakewoods Office Solutions"
-            className="w-[230px] md:w-[300px]"
+            src="/images/lwo-hero.png"
+            alt="Moody architectural office building exterior"
+            fetchPriority="high"
+            className="absolute inset-0 h-full w-full object-cover opacity-70"
           />
-          <p className="mt-8 max-w-md text-[10px] font-semibold uppercase tracking-[.38em] text-white/70">
-            Commercial workplace design & installation
-          </p>
-        </div>
-      </section>
+          <div className="absolute inset-0 bg-[#0b0d0d]/55" />
+          <div className="relative z-10 flex flex-col items-center px-5 text-center">
+            <img
+              src="/images/lwo-logo.png"
+              alt="Lakewoods Office Solutions"
+              className="w-[230px] md:w-[300px]"
+            />
+            <p className="mt-8 max-w-md text-[10px] font-semibold uppercase tracking-[.38em] text-white/70">
+              Commercial workplace design & installation
+            </p>
+          </div>
+        </section>
+      )}
     </header>
   );
 }
@@ -110,7 +112,7 @@ export function Footer() {
         <div>
           <img src="/images/lwo-logo.png" alt="Lakewoods Office Solutions" loading="lazy" className="mb-6 w-44" />
           <p className="max-w-xs text-sm leading-7 text-white/60">
-            Commercial office solutions, installed with precision. Serving businesses nationwide.
+            Family-owned commercial office solutions — furniture installation, moving, painting, and space planning. Proudly serving Utah and the surrounding Mountain West.
           </p>
         </div>
         <div>
@@ -129,7 +131,7 @@ export function Footer() {
           <div className="flex flex-col gap-3 text-sm text-white/60">
             <a href="tel:8017125772" className="hover:text-white transition-colors">(801) 712-5772</a>
             <a href="mailto:contact@lwosolutions.com" className="hover:text-white transition-colors">contact@lwosolutions.com</a>
-            <span>Serving businesses nationwide</span>
+            <span>Proudly serving Utah & the Mountain West</span>
           </div>
         </div>
       </div>

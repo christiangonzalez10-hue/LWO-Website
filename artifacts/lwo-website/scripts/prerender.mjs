@@ -189,13 +189,13 @@ const ROUTES = [
   },
   {
     url: '/services/commercial-storage',
-    title: 'Commercial Office Storage in Salt Lake City | Lakewoods',
+    title: 'Commercial Storage in Salt Lake City | Lakewoods',
     description:
-      'Secure commercial and office furniture storage in Salt Lake City — short- or long-term, ideal for moves and renovations. Serving Utah & the Wasatch Front.',
+      'Managed, climate-controlled commercial storage in Salt Lake City. Our crew loads, tracks, stores & redelivers your furniture, equipment & inventory. Serving Utah.',
     image: `${BASE}/images/lwo-storage.png`,
     jsonLd: svc(
-      'Commercial Office Storage',
-      'Secure commercial and office furniture storage in Salt Lake City — short- or long-term, with inventory tracking. Ideal for moves and renovations across the Wasatch Front.',
+      'Commercial Storage in Salt Lake City',
+      'Managed, climate-controlled commercial storage in Salt Lake City — our crew handles loading, tracking, and redelivery of office furniture, equipment, and inventory across the Wasatch Front.',
       '/services/commercial-storage',
     ),
   },

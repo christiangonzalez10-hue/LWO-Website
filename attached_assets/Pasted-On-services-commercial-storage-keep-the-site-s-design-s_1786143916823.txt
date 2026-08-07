@@ -1,0 +1,51 @@
+On /services/commercial-storage, keep the site's design system but make this page MORE substantial than a basic service page — it's a revenue priority. Optimize for local SEO around "commercial storage Salt Lake City" and position it as MANAGED/SERVICED commercial storage (not generic self-storage — that's our differentiator). Build/edit with these sections:
+
+Hero
+
+Eyebrow: "MANAGED COMMERCIAL STORAGE — SALT LAKE CITY"
+H1: "Commercial Storage in Salt Lake City" (ensure "commercial storage Salt Lake City" is in/near the H1)
+Subhead: "Climate-controlled, fully managed warehouse storage for Salt Lake City and Wasatch Front businesses — our team handles loading, storage, tracking, and redelivery, so you're not renting an empty unit and doing it yourself."
+CTA: Call Now / Request a Quote
+
+Differentiation section — "Not self-storage. Managed storage."
+Unlike a self-storage unit, our team physically handles your goods with forklifts and an experienced crew, in a climate-controlled warehouse, with your inventory tracked throughout. Ideal for businesses that need their furniture, equipment, inventory, or records stored and handled properly — not hauled by their own staff.
+
+Features/benefits list (these are our real, honest capabilities — do not add claims beyond these):
+
+Climate-controlled warehouse — air-conditioned in summer, heated in winter (protects furniture, electronics, records, and sensitive goods)
+Inventory tracking — your stored items are logged and tracked, so you always know what's in storage and can retrieve it quickly
+Forklift loading/unloading — fast, safe handling of pallets, heavy furniture, and equipment
+Experienced crew that handles the move in and out — you don't lift a thing
+Flexible scheduling — our crew accommodates your timeline, including tight or after-hours windows
+Convenient location near a main highway — easy freight and delivery access
+Room to scale — flexible, month-to-month space that grows or shrinks with your needs
+
+Use cases section (each is a long-tail keyword + helps buyers self-identify):
+
+Office furniture storage between moves or renovations
+Overflow and seasonal inventory storage
+Equipment and fixture storage
+Business records and archive storage
+Furniture storage during office reconfiguration or downsizing
+
+Integrated angle: Because we also move and install, we can pick up, store, track, and redeliver/reinstall your furniture as one coordinated service — one team, one point of contact.
+
+Recurring-friendly framing: emphasize month-to-month/flexible terms and ongoing storage for businesses needing steady, reliable space — not just short-term.
+
+Service-area line near CTA: "Proudly serving Salt Lake City, Sandy, Lehi, Provo, Ogden, Park City, and businesses across Utah."
+
+FAQ:
+
+"Is this self-storage or managed storage?" → We're managed/serviced storage — our crew and forklifts handle loading, storage, and redelivery in a climate-controlled warehouse, with inventory tracked throughout, rather than renting you an empty unit to fill yourself.
+"What can you store?" → Office furniture, equipment, fixtures, inventory, and business records — most commercial goods.
+"Is the warehouse climate-controlled?" → Yes — air-conditioned in summer and heated in winter to protect sensitive items.
+"Will I know what's in storage?" → Yes — we track your inventory so you always know what you have stored and can retrieve it quickly.
+"Do you offer month-to-month storage?" → Yes — flexible terms that scale with your needs.
+"Do you serve areas outside Salt Lake City?" → Yes — Salt Lake City, the Wasatch Front (Sandy, Lehi, Provo, Ogden, Park City), and businesses throughout Utah.
+
+SEO meta:
+
+Title tag: "Commercial Storage in Salt Lake City | Lakewoods" (~52 chars)
+Meta description (UNIQUE, not the sitewide default): "Managed, climate-controlled commercial storage in Salt Lake City. Our crew loads, tracks, stores & redelivers your furniture, equipment & inventory. Serving Utah."
+
+Keep it natural and readable, no keyword stuffing. Match the existing site design/components.

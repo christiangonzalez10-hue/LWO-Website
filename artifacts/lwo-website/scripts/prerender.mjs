@@ -73,6 +73,7 @@ const LOCAL_BUSINESS_JSONLD = {
     'Family-owned commercial office solutions — furniture installation, moving, painting, and space planning. Proudly serving Utah and the surrounding Mountain West.',
   url: BASE,
   email: 'contact@lwosolutions.com',
+  telephone: '+18017125772',
   logo: `${BASE}/images/lwo-logo.png`,
   image: DEFAULT_IMAGE,
   areaServed: { '@type': 'State', name: 'Utah' },

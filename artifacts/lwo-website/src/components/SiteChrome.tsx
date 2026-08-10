@@ -48,7 +48,7 @@ export function SiteHeader() {
             ))}
           </div>
           <a
-            href="mailto:contact@lwosolutions.com"
+            href="tel:+18017125772"
             className="hidden items-center gap-2 bg-[#BF5200] px-5 py-3 text-[9px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00] md:flex"
           >
             CALL NOW
@@ -152,7 +152,7 @@ export function Footer() {
         <div>
           <p className="mb-5 text-[10px] font-bold tracking-[.24em] text-[#C9A96E]">CONTACT</p>
           <div className="flex flex-col gap-3 text-sm text-white/60">
-            <a href="tel:8017125772" className="hover:text-white transition-colors">(801) 712-5772</a>
+            <a href="tel:+18017125772" className="hover:text-white transition-colors">(801) 712-5772</a>
             <a href="mailto:contact@lwosolutions.com" className="hover:text-white transition-colors">contact@lwosolutions.com</a>
             <span>Proudly serving Utah & the Mountain West</span>
           </div>

@@ -72,7 +72,7 @@ export default function Homepage() {
           Family-owned commercial office solutions — furniture installation, moving, painting, and space planning. Proudly serving Utah and the surrounding Mountain West.
         </p>
         <a
-          href="mailto:contact@lwosolutions.com"
+          href="tel:+18017125772"
           className="mt-9 inline-flex items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
         >
           CALL NOW <ArrowUpRight size={15} />

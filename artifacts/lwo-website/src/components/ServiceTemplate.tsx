@@ -34,7 +34,7 @@ export default function ServiceTemplate({ config }: { config: ServiceConfig }) {
         <div className="mx-auto mt-8 h-px w-20 bg-[#C9A96E]" />
         <p className="mx-auto mt-8 max-w-2xl text-sm leading-8">{config.intro}</p>
         <a
-          href="mailto:contact@lwosolutions.com"
+          href="tel:+18017125772"
           className="mt-9 inline-flex items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
         >
           CALL NOW <ArrowUpRight size={15} />

@@ -5,6 +5,27 @@
     <link rel="icon" type="image/png" href="/images/lwo-logomark.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google Analytics 4 — kept in the HTML template so prerendered routes include it -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XE38ZVRD41"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XE38ZVRD41');
+      document.addEventListener('click', function(event) {
+        if (!(event.target instanceof Element)) return;
+        var phoneLink = event.target.closest('a[href^="tel:"]');
+        if (!phoneLink) return;
+
+        gtag('event', 'phone_call_click', {
+          event_category: 'engagement',
+          event_label: 'Business phone',
+          link_url: phoneLink.getAttribute('href'),
+          transport_type: 'beacon'
+        });
+      }, true);
+    </script>
+
     <!--app-head-->
 
     <!-- Hero LCP preload — homepage only, cached on subsequent visits -->

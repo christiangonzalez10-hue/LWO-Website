@@ -92,7 +92,7 @@ export default function StoragePage() {
           renting an empty unit and doing it yourself.
         </p>
         <a
-          href="mailto:contact@lwosolutions.com"
+          href="tel:+18017125772"
           className="mt-9 inline-flex items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
         >
           REQUEST A QUOTE <ArrowUpRight size={15} />

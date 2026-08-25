@@ -61,7 +61,7 @@ export default function ServicePage() {
           assembles, and performs exactly as planned — for businesses across Salt Lake City and the Wasatch Front.
         </p>
         <a
-          href="mailto:contact@lwosolutions.com"
+          href="tel:+18017125772"
           className="mt-9 inline-flex items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
         >
           CALL NOW <ArrowUpRight size={15} />

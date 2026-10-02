@@ -32,7 +32,7 @@ export default function ServicePage() {
   useSEO({
     title: 'Office Furniture Installation Services | Lakewoods Office Solutions',
     description: 'Professional office furniture installation serving Utah and the Mountain West. Expert assembly, placement, leveling, and punch-list support for workstations, desks, panels, and conference rooms.',
-    canonical: '/services/office-installations',
+    canonical: '/services/office-installations/',
     ogImage: 'https://www.lwosolutions.com/images/lwo-installation.png',
     jsonLd: {
       '@context': 'https://schema.org',

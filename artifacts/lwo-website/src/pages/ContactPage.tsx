@@ -41,7 +41,7 @@ export default function ContactPage() {
   useSEO({
     title: 'Contact Lakewoods Office Solutions | Request a Consultation',
     description: 'Get in touch with Lakewoods Office Solutions. Request a free consultation for office furniture installation, commercial moving, painting, design, or relocation services.',
-    canonical: '/contact',
+    canonical: '/contact/',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'ContactPage',

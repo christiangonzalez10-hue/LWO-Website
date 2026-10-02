@@ -6,7 +6,7 @@ export default function AboutPage() {
   useSEO({
     title: 'About Lakewoods Office Solutions | Utah-Based Family-Owned Office Services',
     description: 'Family-owned and Utah-based, Lakewoods Office Solutions delivers furniture installation, moving, painting, and space planning across Utah and the Mountain West.',
-    canonical: '/about',
+    canonical: '/about/',
     ogImage: 'https://www.lwosolutions.com/images/lwo-about.jpg',
     jsonLd: {
       '@context': 'https://schema.org',

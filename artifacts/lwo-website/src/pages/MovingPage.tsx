@@ -6,7 +6,7 @@ const config: ServiceConfig = {
     title: 'Commercial Office Movers in Salt Lake City | Lakewoods',
     description:
       'Salt Lake City commercial office movers — relocations handled by one team that also installs and stores, minimizing your downtime. Serving Utah & the Wasatch Front.',
-    canonical: '/services/commercial-moving',
+    canonical: '/services/commercial-moving/',
     ogImage: 'https://www.lwosolutions.com/images/lwo-moving.png',
     jsonLd: {
       '@context': 'https://schema.org',

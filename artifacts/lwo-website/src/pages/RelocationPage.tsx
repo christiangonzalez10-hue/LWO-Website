@@ -6,7 +6,7 @@ const config: ServiceConfig = {
     title: 'Office Relocation Services in Salt Lake City | Lakewoods',
     description:
       'End-to-end office relocation in Salt Lake City — one coordinated team for moving, storage, and setup. Serving Utah & the Wasatch Front.',
-    canonical: '/services/commercial-relocation',
+    canonical: '/services/commercial-relocation/',
     ogImage: 'https://www.lwosolutions.com/images/lwo-relocation.png',
     jsonLd: {
       '@context': 'https://schema.org',

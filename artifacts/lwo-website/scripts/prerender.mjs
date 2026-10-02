@@ -261,7 +261,8 @@ function esc(s) {
 
 function buildHead(route) {
   const { url, title, description, image, jsonLd } = route;
-  const canonical = `${BASE}${url}`;
+  const canonicalPath = url === '/' ? '/' : `${url.replace(/\/+$/, '')}/`;
+  const canonical = `${BASE}${canonicalPath}`;
   const t = esc(title);
   const d = esc(description);
   const img = esc(image);

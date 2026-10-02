@@ -126,7 +126,7 @@ export function SectionMark() {
   );
 }
 
-export function Footer() {
+export function Footer({ serviceArea }: { serviceArea?: string } = {}) {
   return (
     <footer className="bg-[#1A1A1A] px-5 py-14 text-white lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
@@ -136,7 +136,7 @@ export function Footer() {
             <img src="/images/lwo-logo.png" alt="Lakewoods Office Solutions" loading="lazy" width={176} height={80} className="mb-6 w-44" />
           </picture>
           <p className="max-w-xs text-sm leading-7 text-white/60">
-            Family-owned commercial office solutions — furniture installation, moving, painting, and space planning. Proudly serving Utah and the surrounding Mountain West.
+            Family-owned commercial office solutions — furniture installation, moving, painting, and space planning. Proudly serving {serviceArea ?? 'Utah and the surrounding Mountain West'}.
           </p>
         </div>
         <div>
@@ -155,7 +155,7 @@ export function Footer() {
           <div className="flex flex-col gap-3 text-sm text-white/60">
             <a href="tel:+18017125772" className="hover:text-white transition-colors">(801) 712-5772</a>
             <a href="mailto:contact@lwosolutions.com" className="hover:text-white transition-colors">contact@lwosolutions.com</a>
-            <span>Proudly serving Utah & the Mountain West</span>
+            <span>Proudly serving {serviceArea ?? 'Utah & the Mountain West'}</span>
           </div>
         </div>
       </div>

@@ -50,7 +50,7 @@ assert(
 
 // ── 4. Per-route SEO metadata ────────────────────────────────────────────────
 const BASE = 'https://www.lwosolutions.com';
-const DEFAULT_IMAGE = `${BASE}/images/lwo-hero.png`;
+const DEFAULT_IMAGE = `${BASE}/images/og/lwo-hero.jpg`;
 
 /** Minimal Schema.org Service block shared by every service page */
 function svc(name, description, path) {
@@ -150,17 +150,17 @@ const ROUTES = [
   },
   {
     url: '/about',
-    title: 'About Lakewoods Office Solutions | Utah-Based Family-Owned Office Services',
+    title: 'About Lakewoods Office Solutions | Salt Lake City & Wasatch Front',
     description:
-      'Family-owned and Utah-based, Lakewoods Office Solutions delivers furniture installation, moving, painting, and space planning across Utah and the Mountain West.',
-    image: `${BASE}/images/lwo-about.jpg`,
+      'Family-owned Lakewoods Office Solutions helps Salt Lake City and Wasatch Front businesses with office installation, moving, painting, and workspace planning.',
+    image: `${BASE}/images/og/lwo-about.jpg`,
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'AboutPage',
       name: 'About Lakewoods Office Solutions',
       description:
-        'Family-owned and Utah-based, Lakewoods Office Solutions is committed to revolutionizing the way businesses think about their office environments.',
-      url: `${BASE}/about`,
+        'Family-owned Lakewoods Office Solutions helps commercial workplaces in Salt Lake City and across the Wasatch Front with installation, moving, painting, and space planning.',
+      url: `${BASE}/about/`,
       about: {
         '@type': 'LocalBusiness',
         '@id': `${BASE}/#business`,
@@ -193,7 +193,7 @@ const ROUTES = [
     title: 'Office Furniture Installation Services | Lakewoods Office Solutions',
     description:
       'Professional office furniture installation serving Utah and the Mountain West. Expert assembly, placement, leveling, and punch-list support for workstations, desks, panels, and conference rooms.',
-    image: `${BASE}/images/lwo-installation.png`,
+    image: `${BASE}/images/og/lwo-installation.jpg`,
     jsonLd: svc(
       'Office Furniture Installation',
       'Professional office furniture installation — receiving, assembly, placement, leveling, and punch-list support for commercial workspaces.',
@@ -205,7 +205,7 @@ const ROUTES = [
     title: 'Commercial Storage in Salt Lake City | Lakewoods',
     description:
       'Managed, climate-controlled commercial storage in Salt Lake City. Our crew loads, tracks, stores & redelivers your furniture, equipment & inventory. Serving Utah.',
-    image: `${BASE}/images/lwo-storage.png`,
+    image: `${BASE}/images/og/lwo-storage.jpg`,
     jsonLd: svc(
       'Commercial Storage in Salt Lake City',
       'Managed, climate-controlled commercial storage in Salt Lake City — our crew handles loading, tracking, and redelivery of office furniture, equipment, and inventory across the Wasatch Front.',
@@ -217,7 +217,7 @@ const ROUTES = [
     title: 'Commercial Office Movers in Salt Lake City | Lakewoods',
     description:
       'Salt Lake City commercial office movers — relocations handled by one team that also installs and stores, minimizing your downtime. Serving Utah & the Wasatch Front.',
-    image: `${BASE}/images/lwo-moving.png`,
+    image: `${BASE}/images/og/lwo-moving.jpg`,
     jsonLd: svc(
       'Commercial Office Moving',
       'Commercial office movers in Salt Lake City — moving, furniture installation, and storage coordinated by one integrated team to minimize downtime across the Wasatch Front.',
@@ -229,7 +229,7 @@ const ROUTES = [
     title: 'Commercial Painting Services in Salt Lake City | Lakewoods',
     description:
       'Commercial office painting in Salt Lake City — brand colors, low-VOC options, after-hours scheduling. Serving businesses across Utah & the Wasatch Front.',
-    image: `${BASE}/images/lwo-painting.png`,
+    image: `${BASE}/images/og/lwo-painting.jpg`,
     jsonLd: svc(
       'Commercial Painting Services',
       'Professional commercial painting in Salt Lake City — interior and exterior, low-VOC options, brand-aligned color consulting, and after-hours scheduling across the Wasatch Front.',
@@ -241,7 +241,7 @@ const ROUTES = [
     title: 'Commercial Office Design in Salt Lake City | Lakewoods',
     description:
       'Office design and custom furniture for Salt Lake City businesses — space planning, brand-aligned interiors, and turnkey installation. Serving Utah & the Wasatch Front.',
-    image: `${BASE}/images/lwo-design.png`,
+    image: `${BASE}/images/og/lwo-design.jpg`,
     jsonLd: svc(
       'Commercial Office Design & Custom Furniture',
       'Bespoke commercial workspace design and custom furniture for Salt Lake City businesses — space planning, brand-aligned interiors, ergonomic layouts, and turnkey installation across the Wasatch Front.',
@@ -253,7 +253,7 @@ const ROUTES = [
     title: 'Office Relocation Services in Salt Lake City | Lakewoods',
     description:
       'End-to-end office relocation in Salt Lake City — one coordinated team for moving, storage, and setup. Serving Utah & the Wasatch Front.',
-    image: `${BASE}/images/lwo-relocation.png`,
+    image: `${BASE}/images/og/lwo-relocation.jpg`,
     jsonLd: svc(
       'Commercial Office Relocation Services',
       'End-to-end office relocation management in Salt Lake City — site surveys, vendor coordination, moving, storage, furniture installation, and complete setup across the Wasatch Front.',
@@ -289,6 +289,9 @@ function buildHead(route) {
     `<meta property="og:description" content="${d}" />`,
     `<meta property="og:url" content="${c}" />`,
     `<meta property="og:image" content="${img}" />`,
+    `<meta property="og:image:width" content="1200" />`,
+    `<meta property="og:image:height" content="630" />`,
+    `<meta property="og:image:type" content="image/jpeg" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:title" content="${t}" />`,
     `<meta name="twitter:description" content="${d}" />`,

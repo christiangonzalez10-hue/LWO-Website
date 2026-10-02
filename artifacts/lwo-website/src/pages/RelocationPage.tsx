@@ -7,7 +7,7 @@ const config: ServiceConfig = {
     description:
       'End-to-end office relocation in Salt Lake City — one coordinated team for moving, storage, and setup. Serving Utah & the Wasatch Front.',
     canonical: '/services/commercial-relocation/',
-    ogImage: 'https://www.lwosolutions.com/images/lwo-relocation.png',
+    ogImage: 'https://www.lwosolutions.com/images/og/lwo-relocation.jpg',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'Service',

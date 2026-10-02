@@ -7,7 +7,7 @@ const config: ServiceConfig = {
     description:
       'Office design and custom furniture for Salt Lake City businesses — space planning, brand-aligned interiors, and turnkey installation. Serving Utah & the Wasatch Front.',
     canonical: '/services/commercial-design-furniture/',
-    ogImage: 'https://www.lwosolutions.com/images/lwo-design.png',
+    ogImage: 'https://www.lwosolutions.com/images/og/lwo-design.jpg',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'Service',

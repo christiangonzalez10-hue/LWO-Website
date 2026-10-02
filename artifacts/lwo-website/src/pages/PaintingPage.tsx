@@ -7,7 +7,7 @@ const config: ServiceConfig = {
     description:
       'Commercial office painting in Salt Lake City — brand colors, low-VOC options, after-hours scheduling. Serving businesses across Utah & the Wasatch Front.',
     canonical: '/services/commercial-painting/',
-    ogImage: 'https://www.lwosolutions.com/images/lwo-painting.png',
+    ogImage: 'https://www.lwosolutions.com/images/og/lwo-painting.jpg',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'Service',

@@ -9,7 +9,7 @@ export type SEOMeta = {
 };
 
 const BASE = 'https://www.lwosolutions.com';
-const DEFAULT_IMAGE = `${BASE}/images/lwo-hero.png`;
+const DEFAULT_IMAGE = `${BASE}/images/og/lwo-hero.jpg`;
 
 function setMeta(selector: string, attr: string, content: string) {
   let el = document.querySelector<HTMLMetaElement>(selector);
@@ -57,6 +57,9 @@ export function useSEO({ title, description, canonical, ogImage, jsonLd }: SEOMe
     upsertMeta('property', 'og:description', description);
     upsertMeta('property', 'og:url', url);
     upsertMeta('property', 'og:image', image);
+    upsertMeta('property', 'og:image:width', '1200');
+    upsertMeta('property', 'og:image:height', '630');
+    upsertMeta('property', 'og:image:type', 'image/jpeg');
     upsertMeta('property', 'og:type', 'website');
     upsertMeta('property', 'og:site_name', 'Lakewoods Office Solutions');
 

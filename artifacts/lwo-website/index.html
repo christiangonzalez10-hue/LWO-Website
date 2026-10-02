@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/images/lwo-logomark.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Cloudflare Web Analytics — public site ID; manual embedding avoids duplicate automatic injection. -->
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"43d4207626b14d9ebc2e038dc1faeb15"}'></script>
 
     <!-- Google Analytics 4 — kept in the HTML template so prerendered routes include it -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XE38ZVRD41"></script>
@@ -32,15 +36,8 @@
     <link rel="preload" as="image" href="/images/lwo-hero-640.webp" type="image/webp" media="(max-width: 768px)" />
     <link rel="preload" as="image" href="/images/lwo-hero-1024.webp" type="image/webp" media="(min-width: 769px)" />
 
-    <!-- Montserrat — non-blocking load -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-    />
+    <!-- Montserrat is self-hosted; preload the primary Latin subset. -->
+    <link rel="preload" href="/fonts/montserrat-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <div id="root"><!--app-html--></div>

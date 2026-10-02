@@ -4,16 +4,16 @@ import { useSEO } from '@/hooks/useSEO';
 
 export default function AboutPage() {
   useSEO({
-    title: 'About Lakewoods Office Solutions | Utah-Based Family-Owned Office Services',
-    description: 'Family-owned and Utah-based, Lakewoods Office Solutions delivers furniture installation, moving, painting, and space planning across Utah and the Mountain West.',
+    title: 'About Lakewoods Office Solutions | Salt Lake City & Wasatch Front',
+    description: 'Family-owned Lakewoods Office Solutions helps Salt Lake City and Wasatch Front businesses with office installation, moving, painting, and workspace planning.',
     canonical: '/about/',
-    ogImage: 'https://www.lwosolutions.com/images/lwo-about.jpg',
+    ogImage: 'https://www.lwosolutions.com/images/og/lwo-about.jpg',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'AboutPage',
       name: 'About Lakewoods Office Solutions',
-      description: 'Family-owned and Utah-based, Lakewoods Office Solutions is committed to revolutionizing the way businesses think about their office environments.',
-      url: 'https://www.lwosolutions.com/about',
+      description: 'Family-owned Lakewoods Office Solutions helps commercial workplaces in Salt Lake City and across the Wasatch Front with installation, moving, painting, and space planning.',
+      url: 'https://www.lwosolutions.com/about/',
       about: {
         '@type': 'LocalBusiness',
         '@id': 'https://www.lwosolutions.com/#business',
@@ -34,10 +34,10 @@ export default function AboutPage() {
         </h1>
         <div className="mx-auto mt-8 h-px w-20 bg-[#C9A96E]" />
         <p className="mx-auto mt-8 max-w-2xl text-sm leading-8">
-          As a family owned business based in Utah we are committed to revolutionizing the way
-          businesses think about their office environments. As a young, dynamic company with
-          extensive experience, we offer innovative and personalized solutions in office supplies
-          and services.
+          As a family-owned business serving Salt Lake City and the Wasatch Front, we help
+          offices, warehouses, and multi-site businesses plan, install, move, and refresh their
+          commercial spaces. Our Utah-based team combines hands-on experience with a personal
+          approach to every workplace project.
         </p>
       </section>
 
@@ -58,7 +58,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/60 to-transparent" />
           <div className="absolute bottom-0 left-0 border-t border-[#C9A96E] bg-[#1A1A1A]/80 px-7 py-5">
             <p className="text-[10px] font-bold uppercase tracking-[.2em] text-[#C9A96E]">
-              Family owned · Utah based · Mountain West
+              Family owned · Salt Lake City · Wasatch Front
             </p>
           </div>
         </div>
@@ -70,10 +70,11 @@ export default function AboutPage() {
             A personal touch<br />at every scale.
           </h2>
           <p className="mt-7 text-sm leading-8">
-            Being family owned means every client relationship is personal to us. We bring the
-            care and accountability of a small business with the expertise to handle projects of
-            any scale — so no matter the size of your project, you work with people who
-            genuinely care about the outcome.
+            Being family owned means every client relationship is personal to us. For businesses
+            in Salt Lake City and across the Wasatch Front, we bring the care and accountability
+            of a small business with the expertise to handle commercial projects of any scale.
+            From a single office to a multi-site workplace, you work with people who genuinely
+            care about the outcome.
           </p>
           <a
             href="mailto:contact@lwosolutions.com"
@@ -102,19 +103,19 @@ export default function AboutPage() {
               Icon: Target,
               label: 'OUR MISSION',
               heading: 'Tailored solutions, trusted results.',
-              body: 'To provide tailored office solutions that meet the unique needs of every client, improving their day-to-day operations and overall business performance. We are dedicated to delivering top-quality products and exceptional service that our clients can trust.',
+              body: 'To provide tailored office solutions for businesses in Salt Lake City and across the Wasatch Front, improving their day-to-day operations and overall business performance. We are dedicated to delivering top-quality products and dependable service that our commercial clients can trust.',
             },
             {
               Icon: Lightbulb,
               label: 'OUR VISION',
               heading: 'The leading choice for business.',
-              body: "To be the leading choice for businesses seeking office solutions, recognized for our innovation, commitment to sustainability, and focus on customer success. We aim to make a positive impact on both our clients\u2019 businesses and the wider community.",
+              body: "To be the leading choice for commercial workplace solutions in Salt Lake City and the Wasatch Front, recognized for our innovation, commitment to sustainability, and focus on customer success. We aim to make a positive impact on our clients\u2019 businesses and the communities we serve.",
             },
             {
               Icon: Heart,
               label: 'OUR VALUES',
               heading: 'People first, always.',
-              body: 'We believe great workspaces start with great relationships. We show up with honesty, follow through on our commitments, and treat every project — large or small — with the same level of care and craftsmanship.',
+              body: 'We believe great workspaces start with great relationships. Whether your business is in Salt Lake City or elsewhere along the Wasatch Front, we show up with honesty, follow through on our commitments, and treat every commercial project — large or small — with the same care and craftsmanship.',
             },
           ].map(({ Icon, label, heading, body }) => (
             <div key={label} className="bg-white p-10">
@@ -147,7 +148,7 @@ export default function AboutPage() {
         </a>
       </section>
 
-      <Footer />
+      <Footer serviceArea="Salt Lake City and the Wasatch Front" />
     </main>
   );
 }

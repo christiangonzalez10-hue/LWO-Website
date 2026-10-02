@@ -118,6 +118,6 @@ export const ourWorkSEO: SEOMeta = {
   description:
     'Explore Lakewoods commercial project work for offices, warehouses, and multi-site businesses in Salt Lake City and across the Wasatch Front.',
   canonical: '/our-work/',
-  ogImage: `${BASE}/images/lwo-hero.png`,
+  ogImage: `${BASE}/images/og/lwo-hero.jpg`,
   jsonLd: createOurWorkSchema(projects),
 };

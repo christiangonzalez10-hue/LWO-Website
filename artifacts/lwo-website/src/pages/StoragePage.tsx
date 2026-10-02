@@ -56,7 +56,7 @@ export default function StoragePage() {
     description:
       'Managed, climate-controlled commercial storage in Salt Lake City. Our crew loads, tracks, stores & redelivers your furniture, equipment & inventory. Serving Utah.',
     canonical: '/services/commercial-storage/',
-    ogImage: 'https://www.lwosolutions.com/images/lwo-storage.png',
+    ogImage: 'https://www.lwosolutions.com/images/og/lwo-storage.jpg',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'Service',

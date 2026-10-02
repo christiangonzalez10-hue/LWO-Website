@@ -8,6 +8,7 @@ import MovingPage from '@/pages/MovingPage';
 import PaintingPage from '@/pages/PaintingPage';
 import DesignPage from '@/pages/DesignPage';
 import RelocationPage from '@/pages/RelocationPage';
+import OurWorkPage from '@/pages/OurWorkPage';
 import NotFound from '@/pages/not-found';
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
     <Switch>
       <Route path="/" component={Homepage} />
       <Route path="/about" component={AboutPage} />
+      <Route path="/our-work" component={OurWorkPage} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/services/office-installations" component={ServicePage} />
       <Route path="/services/commercial-storage" component={StoragePage} />

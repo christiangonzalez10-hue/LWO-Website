@@ -27,6 +27,12 @@ const config: ServiceConfig = {
   title: 'Commercial Painting Services in Salt Lake City',
   intro:
     'Professional commercial painting that transforms your workspace — precise application, minimal disruption, and finishes built to last, for offices across Salt Lake City and the Wasatch Front.',
+  audienceLine:
+    'Commercial-only: office, warehouse, and multi-site business painting across the Wasatch Front.',
+  detailEyebrow: 'FINISHES PLANNED FOR WORKPLACES',
+  detailTitle: 'A better finish, without business downtime.',
+  detailCopy:
+    'From surface preparation and color selection to the final walkthrough, we plan each commercial paint project around how your space is used. After-hours scheduling helps protect daily operations, while careful prep and professional coatings deliver an even, durable finish.',
   image: '/images/lwo-painting.png',
   imageAlt: 'Professional painters in a bright commercial office',
   benefits: [
@@ -44,6 +50,10 @@ const config: ServiceConfig = {
     ['04', 'INSPECT', 'We walk the space with you, address every punch-list item, and leave it ready.', CheckCircle2],
   ],
   faqs: [
+    [
+      'Do you take personal painting jobs?',
+      'No. Lakewoods serves commercial and B2B clients only—not homeowners or personal painting projects. We paint business spaces such as offices, warehouses, and multi-site facilities.',
+    ],
     [
       'Can you paint after hours or on weekends?',
       'Yes. We regularly schedule evening and weekend work so your Salt Lake City team never loses a productive day. After-hours availability is standard for us, not an exception.',

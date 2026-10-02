@@ -15,6 +15,7 @@ import { build } from 'vite';
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import assert from 'node:assert/strict';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
@@ -38,10 +39,14 @@ await build({
 });
 
 // ── 2. Load the SSR render function ─────────────────────────────────────────
-const { render } = await import(resolve(ssrOutDir, 'entry-server.js'));
+const { render, ourWorkSEO } = await import(resolve(ssrOutDir, 'entry-server.js'));
 
 // ── 3. Load the built HTML template (produced by `vite build` client pass) ──
 const template = readFileSync(resolve(root, 'dist/index.html'), 'utf-8');
+assert(
+  template.includes('<!--app-head-->') && template.includes('<!--app-html-->'),
+  'Prerender requires a fresh Vite template. Run the full build, not prerender alone.',
+);
 
 // ── 4. Per-route SEO metadata ────────────────────────────────────────────────
 const BASE = 'https://www.lwosolutions.com';
@@ -162,6 +167,13 @@ const ROUTES = [
         name: 'Lakewoods Office Solutions',
       },
     },
+  },
+  {
+    url: '/our-work',
+    title: ourWorkSEO.title,
+    description: ourWorkSEO.description,
+    image: ourWorkSEO.ogImage,
+    jsonLd: ourWorkSEO.jsonLd,
   },
   {
     url: '/contact',
@@ -288,8 +300,17 @@ function buildHead(route) {
 
 // ── 6. Render and write every route ─────────────────────────────────────────
 console.log('[prerender] Rendering routes…');
+const homepageHtml = render('/');
 for (const route of ROUTES) {
   const appHtml = render(route.url);
+  if (route.url !== '/') {
+    assert.notEqual(appHtml, homepageHtml, `${route.url} incorrectly rendered the homepage.`);
+    assert.equal(
+      render(`${route.url}/`),
+      appHtml,
+      `${route.url} and its trailing-slash alias must render the same page.`,
+    );
+  }
   const headHtml = buildHead(route);
 
   const html = template

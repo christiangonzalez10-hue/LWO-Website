@@ -1,6 +1,7 @@
 import { renderToStaticMarkup } from 'react-dom/server';
 import { Router } from 'wouter';
 import App from './App';
+export { ourWorkSEO } from './data/our-work';
 
 /**
  * Renders the app for a given URL to a static HTML string.
@@ -14,7 +15,7 @@ import App from './App';
 export function render(url: string): string {
   // A minimal wouter location hook: always returns the pre-set URL.
   // navigate is a no-op — nothing navigates during a static render.
-  const staticHook = () => [url, () => {}] as const;
+  const staticHook = (): [string, () => void] => [url, () => {}];
 
   return renderToStaticMarkup(
     <Router hook={staticHook}>

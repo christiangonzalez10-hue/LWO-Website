@@ -27,6 +27,12 @@ const config: ServiceConfig = {
   title: 'Commercial Office Movers in Salt Lake City',
   intro:
     'One integrated team handles your move, furniture reinstallation, and storage — so Salt Lake City and Wasatch Front businesses spend less time managing vendors and more time back at work.',
+  audienceLine:
+    'Commercial-only: office, warehouse, and multi-site business moves across the Wasatch Front.',
+  detailEyebrow: 'ONE COORDINATED COMMERCIAL MOVE',
+  detailTitle: 'Move the workplace. Keep work moving.',
+  detailCopy:
+    'A business move is more than transport. We sequence furniture, equipment, and interim storage around your operating schedule, then reinstall workstations so your team can get back to work with less downtime.',
   image: '/images/lwo-moving.png',
   imageAlt: 'Professional commercial movers handling office furniture and equipment',
   benefits: [
@@ -44,6 +50,10 @@ const config: ServiceConfig = {
     ['04', 'REINSTALL', 'Your new Salt Lake City or Wasatch Front workspace is reassembled, configured, and ready for your team on day one.', CheckCircle2],
   ],
   faqs: [
+    [
+      'Do you handle residential moves or consumer self-storage?',
+      'No. We serve commercial and B2B clients only. Our crews move workplaces and business assets; we do not move homes or provide personal self-storage.',
+    ],
     [
       'What makes Lakewoods different from a standard moving company?',
       'We\'re not just movers. The same team that relocates your office can also reinstall your furniture and handle interim storage — so you have one point of contact instead of three. That means fewer scheduling gaps, less downtime, and a faster path back to normal operations.',

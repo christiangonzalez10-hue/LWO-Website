@@ -8,6 +8,10 @@ export type ServiceConfig = {
   label: string;
   title: string;
   intro: string;
+  audienceLine: string;
+  detailEyebrow: string;
+  detailTitle: string;
+  detailCopy: string;
   image: string;
   imageAlt: string;
   benefits: string[];
@@ -27,6 +31,12 @@ export default function ServiceTemplate({ config }: { config: ServiceConfig }) {
 
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-5 py-20 text-center md:py-28">
+        <p className="mx-auto mb-8 max-w-3xl border-y border-[#d8d0c3] py-4 text-xs font-bold uppercase leading-6 tracking-[.12em] text-[#1F8080]">
+          {config.audienceLine}
+          <span className="mt-1 block font-medium normal-case tracking-normal text-[#4E4B66]">
+            Commercial clients only—not residential moves, personal painting jobs, or consumer self-storage.
+          </span>
+        </p>
         <p className="text-xs font-bold uppercase tracking-[.28em] text-[#1F8080]">{config.label}</p>
         <h1 className="mt-7 text-3xl font-bold uppercase leading-[1.3] tracking-[.18em] text-[#1F8080] md:text-5xl">
           {config.title}
@@ -58,14 +68,15 @@ export default function ServiceTemplate({ config }: { config: ServiceConfig }) {
         </div>
         <div>
           <p className="text-xs font-bold uppercase tracking-[.28em] text-[#1F8080]">
-            BUILT FOR THE WAY BUSINESS MOVES
+            {config.detailEyebrow}
           </p>
           <h2 className="mt-5 text-3xl font-bold uppercase leading-[1.35] tracking-[.14em] text-[#1A1A1A]">
-            Confidence in every detail.
+            {config.detailTitle}
           </h2>
-          <p className="mt-7 text-sm leading-8">
-            {config.intro} Our team keeps the work organized, visible, and accountable from first
-            conversation through final handoff.
+          <p className="mt-7 text-sm leading-8">{config.detailCopy}</p>
+          <p className="mt-4 border-l-2 border-[#C9A96E] pl-4 text-sm font-semibold leading-7 text-[#4E4B66]">
+            Lakewoods serves commercial and B2B clients only—not residential moves, personal painting
+            jobs, or consumer self-storage.
           </p>
           <div className="mt-8 grid gap-4">
             {config.benefits.map((item) => (

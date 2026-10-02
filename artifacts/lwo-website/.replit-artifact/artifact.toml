@@ -19,6 +19,79 @@ build = [ "pnpm", "--filter", "@workspace/lwo-website", "run", "build" ]
 serve = "static"
 publicDir = "artifacts/lwo-website/dist"
 
+# Serve prerendered pages before the fallback for unknown SPA paths.
+[[services.production.rewrites]]
+from = "/about"
+to = "/about/index.html"
+
+[[services.production.rewrites]]
+from = "/about/"
+to = "/about/index.html"
+
+[[services.production.rewrites]]
+from = "/our-work"
+to = "/our-work/index.html"
+
+[[services.production.rewrites]]
+from = "/our-work/"
+to = "/our-work/index.html"
+
+[[services.production.rewrites]]
+from = "/contact"
+to = "/contact/index.html"
+
+[[services.production.rewrites]]
+from = "/contact/"
+to = "/contact/index.html"
+
+[[services.production.rewrites]]
+from = "/services/office-installations"
+to = "/services/office-installations/index.html"
+
+[[services.production.rewrites]]
+from = "/services/office-installations/"
+to = "/services/office-installations/index.html"
+
+[[services.production.rewrites]]
+from = "/services/commercial-storage"
+to = "/services/commercial-storage/index.html"
+
+[[services.production.rewrites]]
+from = "/services/commercial-storage/"
+to = "/services/commercial-storage/index.html"
+
+[[services.production.rewrites]]
+from = "/services/commercial-moving"
+to = "/services/commercial-moving/index.html"
+
+[[services.production.rewrites]]
+from = "/services/commercial-moving/"
+to = "/services/commercial-moving/index.html"
+
+[[services.production.rewrites]]
+from = "/services/commercial-painting"
+to = "/services/commercial-painting/index.html"
+
+[[services.production.rewrites]]
+from = "/services/commercial-painting/"
+to = "/services/commercial-painting/index.html"
+
+[[services.production.rewrites]]
+from = "/services/commercial-design-furniture"
+to = "/services/commercial-design-furniture/index.html"
+
+[[services.production.rewrites]]
+from = "/services/commercial-design-furniture/"
+to = "/services/commercial-design-furniture/index.html"
+
+[[services.production.rewrites]]
+from = "/services/commercial-relocation"
+to = "/services/commercial-relocation/index.html"
+
+[[services.production.rewrites]]
+from = "/services/commercial-relocation/"
+to = "/services/commercial-relocation/index.html"
+
 [[services.production.rewrites]]
 from = "/*"
 to = "/index.html"

@@ -27,6 +27,12 @@ const config: ServiceConfig = {
   title: 'Commercial Office Design & Furniture in Salt Lake City',
   intro:
     'Bespoke commercial space design and custom furniture — from concept to installation, we shape workspaces that reflect your brand and drive productivity, for businesses across Salt Lake City and the Wasatch Front.',
+  audienceLine:
+    'Commercial-only: workplace design for offices, warehouses, and multi-site businesses across the Wasatch Front.',
+  detailEyebrow: 'DESIGNED AROUND HOW YOUR TEAM WORKS',
+  detailTitle: 'Space plans with a business purpose.',
+  detailCopy:
+    'We connect layout, circulation, storage, ergonomics, finishes, and furniture into one practical workplace plan. From a single office to a multi-location standard, design decisions support your brand and the way your people work—then move into coordinated sourcing, custom pieces, and installation.',
   image: '/images/lwo-design.png',
   imageAlt: 'Custom-designed modern office with bespoke furniture',
   benefits: [
@@ -44,6 +50,10 @@ const config: ServiceConfig = {
     ['04', 'INSTALL', 'We deliver, place, and finish the space — ready for your team on day one.', CheckCircle2],
   ],
   faqs: [
+    [
+      'Do you design spaces for homeowners?',
+      'No. Our design and furniture services are exclusively for commercial and B2B clients. We do not take residential interior design or personal painting projects, and we do not offer consumer self-storage.',
+    ],
     [
       'Do you offer custom furniture fabrication?',
       'Yes. We design and build furniture tailored to your dimensions, materials, workflow, and brand — made for your specific space, not adapted from a catalog.',

@@ -27,6 +27,12 @@ const config: ServiceConfig = {
   title: 'Office Relocation Services in Salt Lake City',
   intro:
     'Comprehensive office relocation management for Salt Lake City and Wasatch Front businesses — one integrated team handles moving, storage, and furniture installation, so your people land in a fully operational space.',
+  audienceLine:
+    'Commercial-only: office, warehouse, and multi-site business relocations across the Wasatch Front.',
+  detailEyebrow: 'ONE PLAN FOR THE ENTIRE TRANSITION',
+  detailTitle: 'Relocation managed from survey to setup.',
+  detailCopy:
+    'An office relocation brings sites, schedules, vendors, furniture, and people together. One project lead coordinates those moving parts—from decommissioning and interim storage to installation and handoff—so each location is ready for business on the planned day.',
   image: '/images/lwo-relocation.png',
   imageAlt: 'Professional team coordinating a corporate office relocation',
   benefits: [
@@ -44,6 +50,10 @@ const config: ServiceConfig = {
     ['04', 'SETTLE IN', 'We complete setup, resolve every punch-list item, and make sure your Wasatch Front team is ready to work from day one.', CheckCircle2],
   ],
   faqs: [
+    [
+      'Do you handle residential relocations?',
+      'No. We coordinate relocations for commercial and B2B clients only—not household moves. We also do not take personal painting jobs or provide consumer self-storage.',
+    ],
     [
       'What does a full relocation include?',
       'It can include planning, decommissioning the old space, packing, moving, interim storage, furniture installation and reconfiguration, technology coordination, and closeout. Because we handle moving, storage, and installation in-house, you work with one team instead of three.',

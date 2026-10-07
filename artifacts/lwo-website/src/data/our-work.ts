@@ -75,7 +75,14 @@ export const projects: WorkProject[] = [
     description:
       'Lakewoods is the exclusive commercial installation partner for a major Utah public-sector organization. We work alongside Utah’s leading furniture suppliers, general contractors, and architects to deliver installations on schedule.',
     serviceType: 'Office Installation',
-    images: [],
+    images: [
+      {
+        src: '/images/projects/public-sector-office-installation.webp',
+        alt: 'Rows of office cubicles beneath exposed wood beams and a vaulted ceiling.',
+        width: 1200,
+        height: 900,
+      },
+    ],
   },
 ];
 

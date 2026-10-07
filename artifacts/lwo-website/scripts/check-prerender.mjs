@@ -160,11 +160,15 @@ for (const [path, heading] of expectedHeadings) {
       html.includes('alt="Rows of modular workstations and desks beside tall, glass office windows."'),
       'The supplied sports-organization photo needs descriptive alt text.',
     );
-    assert.equal((html.match(/data-testid="placeholder-project-/g) ?? []).length, 1);
     assert.ok(
-      html.includes('data-testid="placeholder-project-public-sector-exclusive-installation-partner"'),
-      'The public-sector project must remain a photo placeholder without approved photography.',
+      html.includes('src="/images/projects/public-sector-office-installation.webp"'),
+      'The public-sector project must use its supplied workplace photo.',
     );
+    assert.ok(
+      html.includes('alt="Rows of office cubicles beneath exposed wood beams and a vaulted ceiling."'),
+      'The public-sector photo needs descriptive alt text.',
+    );
+    assert.equal((html.match(/data-testid="placeholder-project-/g) ?? []).length, 0);
     assert.equal((html.match(/>Office Installation<\/p>/g) ?? []).length, 2);
   }
   if (path === '/contact/') {

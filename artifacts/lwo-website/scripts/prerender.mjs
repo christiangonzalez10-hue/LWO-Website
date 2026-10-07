@@ -176,6 +176,23 @@ const ROUTES = [
     jsonLd: ourWorkSEO.jsonLd,
   },
   {
+    url: '/trade-partners',
+    title:
+      'Commercial Installation Partner for Furniture Dealers, General Contractors & Architects | Lakewoods Office Solutions',
+    description:
+      'A Utah commercial installation partner for furniture dealers, general contractors, and architects. Installation, receiving, staging, and closeout in Salt Lake City and the Wasatch Front.',
+    image: DEFAULT_IMAGE,
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${BASE}/trade-partners/#webpage`,
+      name: 'Commercial Installation Partner for Furniture Dealers, General Contractors & Architects | Lakewoods Office Solutions',
+      url: `${BASE}/trade-partners/`,
+      about: { '@type': 'LocalBusiness', '@id': `${BASE}/#business` },
+      publisher: { '@type': 'LocalBusiness', '@id': `${BASE}/#business` },
+    },
+  },
+  {
     url: '/contact',
     title: 'Contact Lakewoods Office Solutions | Request a Consultation',
     description:

@@ -93,6 +93,14 @@ from = "/services/commercial-relocation/"
 to = "/services/commercial-relocation/index.html"
 
 [[services.production.rewrites]]
+from = "/trade-partners"
+to = "/trade-partners/index.html"
+
+[[services.production.rewrites]]
+from = "/trade-partners/"
+to = "/trade-partners/index.html"
+
+[[services.production.rewrites]]
 from = "/*"
 to = "/index.html"
 

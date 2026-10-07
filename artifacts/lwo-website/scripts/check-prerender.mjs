@@ -14,6 +14,7 @@ const expectedHeadings = new Map([
   ['/about/', 'Who We Are'],
   ['/contact/', 'Request a Consultation'],
   ['/our-work/', 'Our Work'],
+  ['/trade-partners/', 'Your Installation Partner for Commercial Workspace Projects.'],
   ['/services/office-installations/', 'Office Furniture Installation in Salt Lake City'],
   ['/services/commercial-storage/', 'Commercial Storage in Salt Lake City'],
   ['/services/commercial-moving/', 'Commercial Office Movers in Salt Lake City'],
@@ -32,6 +33,14 @@ assert.deepEqual(
 );
 
 const config = readFileSync(resolve(root, '.replit-artifact/artifact.toml'), 'utf8');
+const siteChrome = readFileSync(resolve(root, 'src/components/SiteChrome.tsx'), 'utf8');
+assert.ok(siteChrome.includes("['TRADE PARTNERS', '/trade-partners/']"));
+assert.equal(
+  (siteChrome.match(/links\.map\(/g) ?? []).length,
+  2,
+  'Trade Partners must use the shared link list in desktop and mobile menus.',
+);
+assert.ok(siteChrome.includes('onClick={() => setOpen(false)}'), 'Mobile navigation must close when a link is selected.');
 const rewrites = config
   .split(/^\[\[services\.production\.rewrites\]\]\s*$/m)
   .slice(1)
@@ -104,6 +113,11 @@ for (const [path, heading] of expectedHeadings) {
   assert.ok(html.includes('href="/favicon.ico"') && html.includes('href="/favicon.svg"'));
   assert.ok(html.includes('href="/fonts/montserrat-latin-variable.woff2"'));
   assert.ok(!/fonts\.googleapis\.com|fonts\.gstatic\.com/.test(html));
+  assert.equal(
+    (html.match(/href="\/trade-partners\/"/g) ?? []).length,
+    1,
+    `${path} must expose the Trade Partners route in the static desktop navigation.`,
+  );
   const beacons = [...html.matchAll(/<script\b[^>]*src="https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js"[^>]*>/g)];
   assert.equal(beacons.length, 1, `${path} needs exactly one Cloudflare Web Analytics beacon.`);
   const beaconConfig = beacons[0][0].match(/data-cf-beacon='([^']+)'/)?.[1];
@@ -126,6 +140,50 @@ for (const [path, heading] of expectedHeadings) {
     assert.ok(!html.includes('Mountain West'), 'About must use the actual local service area.');
     for (const section of ['OUR MISSION', 'OUR VISION', 'OUR VALUES']) assert.ok(html.includes(section));
   }
+  if (path === '/') {
+    assert.ok(html.includes("Trusted on Utah&#x27;s Largest Workplace Projects."));
+    assert.ok(html.includes('exclusive commercial installation partner'));
+    assert.ok(html.includes('Utah professional sports organization'));
+  }
+  if (path === '/our-work/') {
+    for (const title of [
+      'Professional Sports Organization — Corporate Offices Build',
+      'Public-Sector Organization — Exclusive Installation Partner',
+    ]) {
+      assert.ok(html.includes(title), `Missing featured commercial case study: ${title}`);
+    }
+    assert.equal((html.match(/data-testid="placeholder-project-/g) ?? []).length, 2);
+    assert.equal((html.match(/>Office Installation<\/p>/g) ?? []).length, 2);
+  }
+  if (path === '/contact/') {
+    assert.ok(html.includes('Trade Partner / Project Inquiry'));
+  }
+  if (path === '/trade-partners/') {
+    const structuredData = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+      .map((match) => JSON.parse(match[1]))
+      .find((schema) => schema['@type'] === 'WebPage');
+    assert.equal(structuredData?.['@id'], `${base}/trade-partners/#webpage`);
+    assert.equal(structuredData?.url, `${base}/trade-partners/`);
+    assert.equal(structuredData?.about?.['@id'], `${base}/#business`);
+    assert.equal(structuredData?.publisher?.['@id'], `${base}/#business`);
+    for (const phrase of [
+      'Who We Work With',
+      'What We Handle',
+      'Why Partners Choose Us',
+      'Trade Partner FAQ',
+      'Discuss Your Project',
+      'furniture dealers',
+      'general contractors',
+      'architects',
+      'facility managers',
+      'Salt Lake City',
+      'Wasatch Front',
+    ]) {
+      assert.ok(html.toLowerCase().includes(phrase.toLowerCase()), `Trade Partners is missing: ${phrase}`);
+    }
+    assert.equal((html.match(/<summary\b/g) ?? []).length, 3);
+  }
+  assert.ok(!/\b(?:subcontractor|sub)\b/i.test(html), `${path} contains prohibited terminology.`);
 
   for (const alias of path === '/' ? ['/'] : [path.replace(/\/$/, ''), path]) {
     const rule = rewrites.find((rewrite) => matches(rewrite.from, alias));

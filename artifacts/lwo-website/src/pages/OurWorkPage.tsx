@@ -1,8 +1,8 @@
-import { ArrowUpRight, Camera } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { Footer, SectionMark, SiteHeader } from '@/components/SiteChrome';
 import { ProjectGallery } from '@/components/ProjectGallery';
 import { useSEO } from '@/hooks/useSEO';
-import { ourWorkSEO, projects, serviceTypes } from '@/data/our-work';
+import { ourWorkSEO, projects } from '@/data/our-work';
 
 export default function OurWorkPage() {
   useSEO(ourWorkSEO);
@@ -23,37 +23,7 @@ export default function OurWorkPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 pb-20 lg:px-8" data-testid="section-gallery">
-        {projects.length > 0 ? (
-          <ProjectGallery projects={projects} />
-        ) : (
-          <div
-            className="border border-[#d8d0c3] px-6 py-16 text-center md:py-20"
-            data-testid="empty-projects"
-          >
-            <Camera size={28} strokeWidth={1.5} className="mx-auto text-[#C9A96E]" />
-            <p className="mt-7 text-[10px] font-bold uppercase tracking-[.24em] text-[#1F8080]">
-              PROJECT PHOTOS COMING SOON
-            </p>
-            <h2 className="mx-auto mt-4 max-w-2xl text-xl font-bold uppercase leading-[1.4] tracking-[.12em] text-[#1A1A1A]">
-              We only show work we can stand behind.
-            </h2>
-            <p className="mx-auto mt-5 max-w-xl text-sm leading-8">
-              Our gallery will feature photos of finished commercial projects, shared with the
-              permission of the businesses we served. Until then, we would be glad to talk
-              through your project directly.
-            </p>
-            <ul className="mx-auto mt-9 flex max-w-2xl flex-wrap justify-center gap-2">
-              {serviceTypes.map((t) => (
-                <li
-                  key={t}
-                  className="border border-[#C9A96E] px-3 py-2 text-[10px] font-bold uppercase tracking-[.18em] text-[#1A1A1A]"
-                >
-                  {t}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+        <ProjectGallery projects={projects} />
       </section>
 
       <SectionMark />

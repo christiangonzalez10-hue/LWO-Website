@@ -76,6 +76,13 @@ export default function AboutPage() {
             From a single office to a multi-site workplace, you work with people who genuinely
             care about the outcome.
           </p>
+          <p className="mt-5 text-sm leading-8">
+            Lakewoods is the exclusive commercial installation partner for a major Utah
+            public-sector organization and recently completed a full workplace build for a
+            Utah professional sports organization's offices. We work alongside Utah's leading
+            furniture suppliers, general contractors, and architects to deliver installations
+            on schedule.
+          </p>
           <a
             href="mailto:contact@lwosolutions.com"
             className="mt-9 inline-flex w-fit items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"

@@ -1,3 +1,4 @@
+import { Camera } from 'lucide-react';
 import type { WorkProject } from '@/data/our-work';
 
 export function ProjectGallery({ projects }: { projects: readonly WorkProject[] }) {
@@ -12,23 +13,37 @@ export function ProjectGallery({ projects }: { projects: readonly WorkProject[] 
             className="flex flex-col bg-white"
             data-testid={`card-project-${project.id}`}
           >
-            <figure>
-              <div className="aspect-[3/2] overflow-hidden bg-[#f3efe8]">
-                <img
-                  src={lead.src}
-                  alt={lead.alt}
-                  loading="lazy"
-                  width={lead.width ?? 1200}
-                  height={lead.height ?? 800}
-                  className="h-full w-full object-cover"
-                />
+            {lead ? (
+              <figure>
+                <div className="aspect-[3/2] overflow-hidden bg-[#f3efe8]">
+                  <img
+                    src={lead.src}
+                    alt={lead.alt}
+                    loading="lazy"
+                    width={lead.width ?? 1200}
+                    height={lead.height ?? 800}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                {lead.caption && (
+                  <figcaption className="border-b border-[#d8d0c3] px-6 py-3 text-xs leading-6 text-[#4E4B66]">
+                    {lead.caption}
+                  </figcaption>
+                )}
+              </figure>
+            ) : (
+              <div
+                role="img"
+                aria-label={`Project photo placeholder for ${project.title}`}
+                data-testid={`placeholder-project-${project.id}`}
+                className="flex aspect-[3/2] flex-col items-center justify-center gap-4 border-b border-[#d8d0c3] bg-[#f3efe8] px-6 text-center text-[#6f695f]"
+              >
+                <Camera size={30} strokeWidth={1.4} aria-hidden="true" className="text-[#C9A96E]" />
+                <span className="text-xs font-bold uppercase tracking-[.2em]">
+                  Approved project photo placeholder
+                </span>
               </div>
-              {lead.caption && (
-                <figcaption className="border-b border-[#d8d0c3] px-6 py-3 text-xs leading-6 text-[#4E4B66]">
-                  {lead.caption}
-                </figcaption>
-              )}
-            </figure>
+            )}
             {rest.length > 0 && (
               <ul className="grid grid-cols-2 gap-px bg-[#d8d0c3] sm:grid-cols-3">
                 {rest.map((img, i) => (

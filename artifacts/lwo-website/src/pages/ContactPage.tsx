@@ -17,6 +17,7 @@ const SERVICES = [
   'Commercial Painting',
   'Commercial Design & Furniture',
   'Commercial Relocation',
+  'Trade Partner / Project Inquiry',
   'Multiple Services / Not Sure',
 ];
 

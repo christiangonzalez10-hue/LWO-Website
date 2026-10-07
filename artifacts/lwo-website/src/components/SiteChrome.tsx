@@ -13,6 +13,7 @@ export function SiteHeader() {
   const links: [string, string][] = [
     ['HOME', '/'],
     ['SERVICES', href('#services')],
+    ['TRADE PARTNERS', '/trade-partners/'],
     ['WHY US', href('#why-us')],
     ['ABOUT', '/about'],
     ['OUR WORK', '/our-work/'],

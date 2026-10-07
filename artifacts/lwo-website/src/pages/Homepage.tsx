@@ -61,6 +61,25 @@ export default function Homepage() {
     <main className="min-h-screen bg-white font-['Montserrat'] text-[#4E4B66]">
       <SiteHeader />
 
+      {/* Project credibility — keep every organization unnamed. */}
+      <section className="border-y border-[#d8d0c3] bg-[#fbfaf7] px-5 py-14 md:py-16">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="text-xs font-bold uppercase tracking-[.28em] text-[#1F8080]">
+            TRUSTED BY LEADING UTAH ORGANIZATIONS
+          </p>
+          <h2 className="mt-4 text-2xl font-bold uppercase leading-[1.4] tracking-[.12em] text-[#1A1A1A] md:text-3xl">
+            Trusted on Utah's Largest Workplace Projects.
+          </h2>
+          <p className="mx-auto mt-5 max-w-3xl text-sm leading-8">
+            Lakewoods is the exclusive commercial installation partner for a major Utah
+            public-sector organization, and recently completed a full workplace build for a
+            Utah professional sports organization's offices. We work alongside Utah's leading
+            furniture suppliers, general contractors, and architects to deliver installations
+            on schedule.
+          </p>
+        </div>
+      </section>
+
       {/* Intro */}
       <section className="mx-auto max-w-4xl px-5 py-16 text-center md:py-24">
         <p className="text-xs font-bold uppercase tracking-[.28em] text-[#1F8080]">LAKEWOODS OFFICE SOLUTIONS</p>

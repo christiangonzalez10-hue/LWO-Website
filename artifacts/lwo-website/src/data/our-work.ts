@@ -23,12 +23,13 @@ export type WorkProject = {
   title: string;
   description: string;
   serviceType: (typeof serviceTypes)[number];
-  images: [ProjectImage, ...ProjectImage[]];
+  images: ProjectImage[];
 };
 
 /**
  * Add verified completed projects here. Photos belong in public/images/projects/.
  * No stock or illustrative images are presented as completed Lakewoods work.
+ * Client names require written permission before they can be published.
  *
  * Copy this shape into the array, replacing all example details and paths:
  * {
@@ -52,7 +53,24 @@ export type WorkProject = {
  *   ],
  * }
  */
-export const projects: WorkProject[] = [];
+export const projects: WorkProject[] = [
+  {
+    id: 'professional-sports-corporate-offices-build',
+    title: 'Professional Sports Organization — Corporate Offices Build',
+    description:
+      "Lakewoods recently completed a full workplace build for a Utah professional sports organization's offices. We work alongside Utah's leading furniture suppliers, general contractors, and architects to deliver installations on schedule.",
+    serviceType: 'Office Installation',
+    images: [],
+  },
+  {
+    id: 'public-sector-exclusive-installation-partner',
+    title: 'Public-Sector Organization — Exclusive Installation Partner',
+    description:
+      'Lakewoods is the exclusive commercial installation partner for a major Utah public-sector organization. We work alongside Utah’s leading furniture suppliers, general contractors, and architects to deliver installations on schedule.',
+    serviceType: 'Office Installation',
+    images: [],
+  },
+];
 
 const BASE = 'https://www.lwosolutions.com';
 const BUSINESS_ID = `${BASE}/#business`;
@@ -67,8 +85,8 @@ export function createOurWorkSchema(items: readonly WorkProject[]): Record<strin
       throw new Error(`Our Work project id "${project.id}" must be unique.`);
     }
     ids.add(project.id);
-    if (!serviceTypes.includes(project.serviceType) || project.images.length === 0) {
-      throw new Error(`Our Work project "${project.id}" needs a valid service tag and at least one photo.`);
+    if (!serviceTypes.includes(project.serviceType)) {
+      throw new Error(`Our Work project "${project.id}" needs a valid service tag.`);
     }
     for (const image of project.images) {
       if (!image.src.trim() || !image.alt.trim()) {

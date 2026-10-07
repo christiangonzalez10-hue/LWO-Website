@@ -60,7 +60,14 @@ export const projects: WorkProject[] = [
     description:
       "Lakewoods recently completed a full workplace build for a Utah professional sports organization's offices. We work alongside Utah's leading furniture suppliers, general contractors, and architects to deliver installations on schedule.",
     serviceType: 'Office Installation',
-    images: [],
+    images: [
+      {
+        src: '/images/projects/professional-sports-office-build.webp',
+        alt: 'Rows of modular workstations and desks beside tall, glass office windows.',
+        width: 1600,
+        height: 1201,
+      },
+    ],
   },
   {
     id: 'public-sector-exclusive-installation-partner',

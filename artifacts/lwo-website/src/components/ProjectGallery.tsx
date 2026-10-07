@@ -15,7 +15,7 @@ export function ProjectGallery({ projects }: { projects: readonly WorkProject[] 
           >
             {lead ? (
               <figure>
-                <div className="aspect-[3/2] overflow-hidden bg-[#f3efe8]">
+                <div className="aspect-[4/3] overflow-hidden bg-[#f3efe8]">
                   <img
                     src={lead.src}
                     alt={lead.alt}
@@ -36,7 +36,7 @@ export function ProjectGallery({ projects }: { projects: readonly WorkProject[] 
                 role="img"
                 aria-label={`Project photo placeholder for ${project.title}`}
                 data-testid={`placeholder-project-${project.id}`}
-                className="flex aspect-[3/2] flex-col items-center justify-center gap-4 border-b border-[#d8d0c3] bg-[#f3efe8] px-6 text-center text-[#6f695f]"
+                className="flex aspect-[4/3] flex-col items-center justify-center gap-4 border-b border-[#d8d0c3] bg-[#f3efe8] px-6 text-center text-[#6f695f]"
               >
                 <Camera size={30} strokeWidth={1.4} aria-hidden="true" className="text-[#C9A96E]" />
                 <span className="text-xs font-bold uppercase tracking-[.2em]">

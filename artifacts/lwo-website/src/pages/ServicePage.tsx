@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import { Footer, SectionMark, SiteHeader } from '@/components/SiteChrome';
+import LeadCaptureSection from '@/components/LeadCaptureSection';
 import { useSEO } from '@/hooks/useSEO';
 
 const faqs: [string, string][] = [
@@ -49,24 +50,11 @@ export default function ServicePage() {
     <main className="min-h-screen bg-white font-['Montserrat'] text-[#4E4B66]">
       <SiteHeader />
 
-      {/* Hero */}
-      <section className="mx-auto max-w-5xl px-5 py-20 text-center md:py-28">
-        <p className="text-xs font-bold uppercase tracking-[.28em] text-[#1F8080]">OFFICE INSTALLATION SERVICES</p>
-        <h1 className="mt-7 text-3xl font-bold uppercase leading-[1.3] tracking-[.18em] text-[#1F8080] md:text-5xl">
-          Office Furniture<br />Installation in<br />Salt Lake City
-        </h1>
-        <div className="mx-auto mt-8 h-px w-20 bg-[#C9A96E]" />
-        <p className="mx-auto mt-8 max-w-2xl text-sm leading-8">
-          From first delivery to final alignment, Lakewoods makes sure your office furniture arrives,
-          assembles, and performs exactly as planned — for businesses across Salt Lake City and the Wasatch Front.
-        </p>
-        <a
-          href="tel:+18017125772"
-          className="mt-9 inline-flex items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
-        >
-          CALL NOW <ArrowUpRight size={15} />
-        </a>
-      </section>
+      <LeadCaptureSection
+        eyebrow="OFFICE INSTALLATION SERVICES"
+        title="Commercial Office Furniture Installation in Salt Lake City"
+        intro="Commercial furniture receiving, assembly, and installation for Salt Lake City and Utah offices."
+      />
 
       {/* Detail */}
       <section className="mx-auto grid max-w-7xl gap-12 border-y border-[#d8d0c3] px-5 py-16 lg:grid-cols-2 lg:items-center lg:px-8">
@@ -171,10 +159,10 @@ export default function ServicePage() {
           A sharper space starts with a sharper plan.
         </h2>
         <a
-          href="mailto:contact@lwosolutions.com"
+          href="#quote-request"
           className="mt-9 inline-flex items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
         >
-          REQUEST A CONSULTATION <ArrowUpRight size={15} />
+          REQUEST A QUOTE <ArrowUpRight size={15} />
         </a>
         <p className="mt-6 text-xs text-[#4E4B66]/70">
           Proudly serving Salt Lake City, Sandy, Lehi, Provo, Ogden, Park City, and businesses across Utah.

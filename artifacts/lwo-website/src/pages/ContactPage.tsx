@@ -2,13 +2,7 @@ import { ArrowUpRight, Building2, CheckCircle2, Loader2, Mail, Phone } from 'luc
 import { useState } from 'react';
 import { Footer, SiteHeader } from '@/components/SiteChrome';
 import { useSEO } from '@/hooks/useSEO';
-
-// ─── Web3Forms ────────────────────────────────────────────────────────────────
-// Sign up free at https://web3forms.com using contact@lwosolutions.com
-// to receive submissions at that address. Paste your Access Key below.
-// The key is safe to commit (it is not a secret — it is scoped to your domain).
-const WEB3FORMS_KEY = '700758c1-82d4-4b03-9915-3f2ac03650ea';
-// ─────────────────────────────────────────────────────────────────────────────
+import { submitLead } from '@/lib/lead-submission';
 
 const SERVICES = [
   'Office Furniture Installation',
@@ -61,23 +55,12 @@ export default function ContactPage() {
     setErrorMsg('');
 
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_KEY,
-          subject: `New inquiry from ${fields.name} — ${fields.service || 'General'}`,
-          from_name: 'Lakewoods Office Solutions Website',
-          ...fields,
-        }),
+      await submitLead({
+        subject: `New inquiry from ${fields.name} — ${fields.service || 'General'}`,
+        ...fields,
       });
-      const data = await res.json();
-      if (data.success) {
-        setState('success');
-        setFields(EMPTY);
-      } else {
-        throw new Error(data.message ?? 'Submission failed');
-      }
+      setState('success');
+      setFields(EMPTY);
     } catch (err) {
       setState('error');
       setErrorMsg(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
@@ -127,7 +110,7 @@ export default function ContactPage() {
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} noValidate className="grid gap-7">
+            <form onSubmit={handleSubmit} className="grid gap-7">
               <div className="grid gap-7 sm:grid-cols-2">
                 <div>
                   <label className={labelClass}>Full Name *</label>

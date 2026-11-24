@@ -1,6 +1,7 @@
 import { ArrowUpRight, ChevronDown, CheckCircle2, type LucideIcon } from 'lucide-react';
 import { useState } from 'react';
 import { Footer, SectionMark, SiteHeader } from '@/components/SiteChrome';
+import LeadCaptureSection from '@/components/LeadCaptureSection';
 import { useSEO, type SEOMeta } from '@/hooks/useSEO';
 
 export type ServiceConfig = {
@@ -19,6 +20,8 @@ export type ServiceConfig = {
   faqs: [string, string][];
   /** Optional line rendered below the CTA button — e.g. a service-area callout */
   serviceAreaLine?: string;
+  /** Show the quote-focused hero used by paid-search landing pages. */
+  showQuoteForm?: boolean;
 };
 
 export default function ServiceTemplate({ config }: { config: ServiceConfig }) {
@@ -29,27 +32,35 @@ export default function ServiceTemplate({ config }: { config: ServiceConfig }) {
     <main className="min-h-screen bg-white font-['Montserrat'] text-[#4E4B66]">
       <SiteHeader />
 
-      {/* Hero */}
-      <section className="mx-auto max-w-5xl px-5 py-20 text-center md:py-28">
-        <p className="mx-auto mb-8 max-w-3xl border-y border-[#d8d0c3] py-4 text-xs font-bold uppercase leading-6 tracking-[.12em] text-[#1F8080]">
-          {config.audienceLine}
-          <span className="mt-1 block font-medium normal-case tracking-normal text-[#4E4B66]">
-            Commercial clients only—not residential moves, personal painting jobs, or consumer self-storage.
-          </span>
-        </p>
-        <p className="text-xs font-bold uppercase tracking-[.28em] text-[#1F8080]">{config.label}</p>
-        <h1 className="mt-7 text-3xl font-bold uppercase leading-[1.3] tracking-[.18em] text-[#1F8080] md:text-5xl">
-          {config.title}
-        </h1>
-        <div className="mx-auto mt-8 h-px w-20 bg-[#C9A96E]" />
-        <p className="mx-auto mt-8 max-w-2xl text-sm leading-8">{config.intro}</p>
-        <a
-          href="tel:+18017125772"
-          className="mt-9 inline-flex items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
-        >
-          CALL NOW <ArrowUpRight size={15} />
-        </a>
-      </section>
+      {config.showQuoteForm ? (
+        <LeadCaptureSection
+          eyebrow={config.label}
+          title={config.title}
+          intro={config.intro}
+          serviceNote={config.audienceLine}
+        />
+      ) : (
+        <section className="mx-auto max-w-5xl px-5 py-20 text-center md:py-28">
+          <p className="mx-auto mb-8 max-w-3xl border-y border-[#d8d0c3] py-4 text-xs font-bold uppercase leading-6 tracking-[.12em] text-[#1F8080]">
+            {config.audienceLine}
+            <span className="mt-1 block font-medium normal-case tracking-normal text-[#4E4B66]">
+              Commercial clients only—not residential moves, personal painting jobs, or consumer self-storage.
+            </span>
+          </p>
+          <p className="text-xs font-bold uppercase tracking-[.28em] text-[#1F8080]">{config.label}</p>
+          <h1 className="mt-7 text-3xl font-bold uppercase leading-[1.3] tracking-[.18em] text-[#1F8080] md:text-5xl">
+            {config.title}
+          </h1>
+          <div className="mx-auto mt-8 h-px w-20 bg-[#C9A96E]" />
+          <p className="mx-auto mt-8 max-w-2xl text-sm leading-8">{config.intro}</p>
+          <a
+            href="tel:+18017125772"
+            className="mt-9 inline-flex items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
+          >
+            CALL NOW <ArrowUpRight size={15} />
+          </a>
+        </section>
+      )}
 
       {/* Detail */}
       <section className="mx-auto grid max-w-7xl gap-12 border-y border-[#d8d0c3] px-5 py-16 lg:grid-cols-2 lg:items-center lg:px-8">
@@ -148,10 +159,10 @@ export default function ServiceTemplate({ config }: { config: ServiceConfig }) {
           A sharper space starts with a sharper plan.
         </h2>
         <a
-          href="mailto:contact@lwosolutions.com"
+          href="#quote-request"
           className="mt-9 inline-flex items-center gap-3 bg-[#BF5200] px-7 py-4 text-[10px] font-bold uppercase tracking-[.2em] text-white transition-colors hover:bg-[#D95C00]"
         >
-          REQUEST A CONSULTATION <ArrowUpRight size={15} />
+          REQUEST A QUOTE <ArrowUpRight size={15} />
         </a>
         {config.serviceAreaLine && (
           <p className="mt-6 text-xs text-[#4E4B66]/70">{config.serviceAreaLine}</p>

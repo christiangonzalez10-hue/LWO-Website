@@ -3,7 +3,7 @@ import ServiceTemplate, { type ServiceConfig } from '@/components/ServiceTemplat
 
 const config: ServiceConfig = {
   seo: {
-    title: 'Commercial Office Design in Salt Lake City | Lakewoods',
+    title: 'Commercial Office Furniture Installation in Salt Lake City | Lakewoods',
     description:
       'Office design and custom furniture for Salt Lake City businesses — space planning, brand-aligned interiors, and turnkey installation. Serving Utah & the Wasatch Front.',
     canonical: '/services/commercial-design-furniture/',
@@ -24,9 +24,9 @@ const config: ServiceConfig = {
     },
   },
   label: 'OFFICE DESIGN & FURNITURE — SALT LAKE CITY',
-  title: 'Commercial Office Design & Furniture in Salt Lake City',
+  title: 'Commercial Office Furniture Installation in Salt Lake City',
   intro:
-    'Bespoke commercial space design and custom furniture — from concept to installation, we shape workspaces that reflect your brand and drive productivity, for businesses across Salt Lake City and the Wasatch Front.',
+    'Commercial office furniture, space planning, and installation for Salt Lake City and Utah businesses.',
   audienceLine:
     'Commercial-only: workplace design for offices, warehouses, and multi-site businesses across the Wasatch Front.',
   detailEyebrow: 'DESIGNED AROUND HOW YOUR TEAM WORKS',
@@ -77,6 +77,7 @@ const config: ServiceConfig = {
   ],
   serviceAreaLine:
     'Proudly serving Salt Lake City, Sandy, Lehi, Provo, Ogden, Park City, and businesses across Utah.',
+  showQuoteForm: true,
 };
 
 export default function DesignPage() {

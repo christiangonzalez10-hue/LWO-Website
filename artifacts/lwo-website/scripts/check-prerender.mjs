@@ -15,11 +15,11 @@ const expectedHeadings = new Map([
   ['/contact/', 'Request a Consultation'],
   ['/our-work/', 'Our Work'],
   ['/trade-partners/', 'Your Installation Partner for Commercial Workspace Projects.'],
-  ['/services/office-installations/', 'Office Furniture Installation in Salt Lake City'],
+  ['/services/office-installations/', 'Commercial Office Furniture Installation in Salt Lake City'],
   ['/services/commercial-storage/', 'Commercial Storage in Salt Lake City'],
   ['/services/commercial-moving/', 'Commercial Office Movers in Salt Lake City'],
   ['/services/commercial-painting/', 'Commercial Painting Services in Salt Lake City'],
-  ['/services/commercial-design-furniture/', 'Commercial Office Design & Furniture in Salt Lake City'],
+  ['/services/commercial-design-furniture/', 'Commercial Office Furniture Installation in Salt Lake City'],
   ['/services/commercial-relocation/', 'Office Relocation Services in Salt Lake City'],
 ]);
 
@@ -123,7 +123,13 @@ for (const [path, heading] of expectedHeadings) {
   const beaconConfig = beacons[0][0].match(/data-cf-beacon='([^']+)'/)?.[1];
   assert.ok(beaconConfig, `${path} is missing its beacon configuration.`);
   assert.match(JSON.parse(beaconConfig).token, /^[a-f0-9]{32}$/, 'Use the real Cloudflare public site ID.');
-  assert.ok(html.includes("gtag('config', 'G-XE38ZVRD41')"), 'Preserve existing GA4.');
+  const gaTags = [...html.matchAll(/<script async src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-XE38ZVRD41"><\/script>/g)];
+  assert.equal(gaTags.length, 1, `${path} must load the existing GA4 tag exactly once.`);
+  assert.equal((html.match(/gtag\('config', 'G-XE38ZVRD41'\)/g) ?? []).length, 1, `${path} must configure GA4 exactly once.`);
+  for (const eventName of ['phone_click', 'phone_call_click', 'email_click']) {
+    assert.ok(html.includes(`'${eventName}'`), `${path} must include the global ${eventName} tracking handler.`);
+  }
+  assert.ok(html.includes('URLSearchParams(window.location.search)'), `${path} must retain campaign query parameters on internal navigation.`);
   const title = html.match(/<title>(.*?)<\/title>/)?.[1];
   assert.ok(title && !titles.has(title), `${path} needs a unique title.`);
   titles.add(title);
@@ -198,6 +204,15 @@ for (const [path, heading] of expectedHeadings) {
       assert.ok(html.toLowerCase().includes(phrase.toLowerCase()), `Trade Partners is missing: ${phrase}`);
     }
     assert.equal((html.match(/<summary\b/g) ?? []).length, 3);
+  }
+  if (path === '/services/office-installations/' || path === '/services/commercial-design-furniture/') {
+    assert.ok(html.includes('id="quote-request"'), `${path} needs a quote form near the top.`);
+    for (const field of ['name="name"', 'name="company"', 'name="phone"', 'name="email"', 'name="message"']) {
+      assert.ok(html.includes(field), `${path} quote form is missing ${field}.`);
+    }
+    assert.ok(html.includes('href="tel:+18017125772"'), `${path} needs a clickable phone number.`);
+    assert.ok(html.includes('href="#quote-request"'), `${path} needs a lower Request a Quote link.`);
+    assert.ok(html.includes('Call Now — (801) 712-5772'), `${path} needs a mobile sticky call button.`);
   }
   assert.ok(!/\b(?:subcontractor|sub)\b/i.test(html), `${path} contains prohibited terminology.`);
 

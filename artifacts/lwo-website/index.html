@@ -18,15 +18,48 @@
       gtag('config', 'G-XE38ZVRD41');
       document.addEventListener('click', function(event) {
         if (!(event.target instanceof Element)) return;
-        var phoneLink = event.target.closest('a[href^="tel:"]');
-        if (!phoneLink) return;
+        var anchor = event.target.closest('a[href]');
+        if (anchor) {
+          try {
+            var destination = new URL(anchor.getAttribute('href'), window.location.href);
+            if (destination.origin === window.location.origin && window.location.search) {
+              new URLSearchParams(window.location.search).forEach(function(value, key) {
+                if (!destination.searchParams.has(key)) destination.searchParams.set(key, value);
+              });
+              anchor.setAttribute('href', destination.pathname + destination.search + destination.hash);
+            }
+          } catch (_) {
+            // Leave non-URL links, such as tel: and mailto:, unchanged.
+          }
+        }
 
-        gtag('event', 'phone_call_click', {
-          event_category: 'engagement',
-          event_label: 'Business phone',
-          link_url: phoneLink.getAttribute('href'),
-          transport_type: 'beacon'
-        });
+        var linkPage = window.location.pathname;
+        var phoneLink = event.target.closest('a[href^="tel:"]');
+        if (phoneLink) {
+          var phoneParameters = {
+            link_page: linkPage,
+            link_url: phoneLink.getAttribute('href'),
+            transport_type: 'beacon'
+          };
+          gtag('event', 'phone_click', phoneParameters);
+          // Preserve the existing GA4 key event while adding the requested event.
+          gtag('event', 'phone_call_click', {
+            event_category: 'engagement',
+            event_label: 'Business phone',
+            link_page: linkPage,
+            link_url: phoneLink.getAttribute('href'),
+            transport_type: 'beacon'
+          });
+        }
+
+        var emailLink = event.target.closest('a[href^="mailto:"]');
+        if (emailLink) {
+          gtag('event', 'email_click', {
+            link_page: linkPage,
+            link_url: emailLink.getAttribute('href'),
+            transport_type: 'beacon'
+          });
+        }
       }, true);
     </script>
 
